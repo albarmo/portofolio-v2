@@ -81,7 +81,7 @@ const LoadingPage = () => {
 
     return (
         <main
-            className="relative h-screen overflow-hidden flex items-center justify-center"
+            className="relative h-screen overflow-hidden flex items-center justify-center z-0"
             style={{
                 background: `url('/assets/chaos-grid.png')`,
                 backgroundSize: "contain",

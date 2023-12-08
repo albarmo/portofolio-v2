@@ -1,5 +1,9 @@
 import { useState, useEffect } from "react";
 
+function randomIntFromInterval(min: number, max: number) {
+    return Math.floor(Math.random() * (max - min + 1) + min);
+}
+
 const CyberPunkText: React.FC<{ text: string; duration: number }> = ({
     text,
     duration,
@@ -47,7 +51,7 @@ const CyberPunkText: React.FC<{ text: string; duration: number }> = ({
         <div>
             <h1
                 id="cyberpunk-text"
-                className="spaceMono font-bold text-4xl uppercase"
+                className="spaceMono w-min font-bold text-2xl md:text-4xl uppercase"
                 onMouseEnter={() => generateRandomText(text)}
                 onMouseLeave={() => setResult(text)}
             >

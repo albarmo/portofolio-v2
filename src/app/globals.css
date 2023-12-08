@@ -38,8 +38,19 @@ progress::-webkit-progress-value {
   background-color: #F0F0F0;
 }
 
+#navbar-logo{
+  border-right: 0.3px dashed #333333;
+}
+
+#navbar-action{
+  border-left: 0.3px dashed #333333;
+}
+#navbar-menubar{
+  border-bottom: 0.3px dashed #333333;
+}
+
 /* FANCY WORD CSS */
-:root {  
+/* :root {  
   --green: rgb(42, 252, 152);
   --blue: rgb(41, 121, 255);
 }
@@ -169,5 +180,5 @@ a {
 
 .fancy:hover > .outer:nth-child(12) {
   transform: translate(120%, -30%) rotate(-10deg);
-}
+} */
 /* FANCY WORD END */
