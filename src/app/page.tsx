@@ -31,9 +31,9 @@ export default function Home() {
             </div>
             <div className="w-screen">
                 <div className="relative -rotate-1 -mb-2">
-                    <div className="animate-marquee whitespace-nowrap">
+                    <div className="marquee whitespace-nowrap">
                         {STACK_LIST.map((stack, index) => (
-                            <span key={index} className="text-xs mx-4">
+                            <span key={index} className="text-sm mx-4">
                                 {stack}
                             </span>
                         ))}
@@ -47,14 +47,14 @@ export default function Home() {
                     </div>
                 </div>
                 <Image
-                    src="/assets/ruler.svg"
+                    src="/assets/ruler.png"
                     alt="Ruler"
-                    width={300}
-                    height={300}
-                    className="w-screen h-10 md:h-auto"
+                    width={1200}
+                    height={200}
+                    className="w-full h-10 md:h-auto"
                 />
                 <div className="relative -rotate-1 -mt-4">
-                    <div className="animate-marquee  whitespace-nowrap">
+                    <div className="marquee animate-marquee whitespace-nowrap ont-extralight">
                         <span className="text-xs mx-4">
                             Lorem ipsum dolor sit amet consectetur adipisicing
                             elit. Eius voluptatibus quasi dicta veniam non odit

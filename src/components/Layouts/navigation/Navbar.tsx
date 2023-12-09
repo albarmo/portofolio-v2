@@ -33,7 +33,7 @@ const Navbar = () => {
     return (
         <header
             id="navbar-bottom"
-            className="fixed w-full h-14 bg--100 flex justify-between items-center z-[101]"
+            className="fixed w-full h-14 bg--100 flex justify-between items-center z-[101] bg-[#0A0A0B]"
         >
             <Drawer
                 isOpen={isOpen}
