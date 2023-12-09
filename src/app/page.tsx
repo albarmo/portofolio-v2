@@ -47,10 +47,10 @@ export default function Home() {
                     </div>
                 </div>
                 <Image
-                    src="/assets/ruler.png"
+                    src="/assets/ruler.svg"
                     alt="Ruler"
                     width={1200}
-                    height={200}
+                    height={50}
                     className="w-full h-10 md:h-auto"
                 />
                 <div className="relative -rotate-1 -mt-4">
