@@ -37,6 +37,9 @@ progress::-webkit-progress-bar {
 progress::-webkit-progress-value {
   background-color: #F0F0F0;
 }
+#navbar-bottom{
+  border-bottom: 0.2px solid #333333;
+}
 
 #navbar-logo{
   border-right: 0.3px dashed #333333;
@@ -45,9 +48,27 @@ progress::-webkit-progress-value {
 #navbar-action{
   border-left: 0.3px dashed #333333;
 }
+
 #navbar-menubar{
   border-bottom: 0.3px dashed #333333;
 }
+
+#navbar-top-border{
+  border-top: 0.3px dashed #333333;
+}
+
+
+.marquee {
+  animation: marquee 5s linear infinite;
+}
+
+.marquee2 {
+  animation: marquee2 5s linear infinite;
+  position: absolute;
+  top: 0;
+}
+
+
 
 /* FANCY WORD CSS */
 /* :root {  

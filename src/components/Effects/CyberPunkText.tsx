@@ -51,7 +51,7 @@ const CyberPunkText: React.FC<{ text: string; duration: number }> = ({
         <div>
             <h1
                 id="cyberpunk-text"
-                className="spaceMono w-min font-bold text-2xl md:text-4xl uppercase"
+                className="spaceMono w-max font-bold text-2xl md:text-4xl uppercase"
                 onMouseEnter={() => generateRandomText(text)}
                 onMouseLeave={() => setResult(text)}
             >

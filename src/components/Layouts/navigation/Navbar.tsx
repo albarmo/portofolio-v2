@@ -11,7 +11,6 @@ const Navbar = () => {
     const { isOpen, open, close } = useModalDisclosure();
 
     const [currentSection, setCurrentSection] = useState<string>("/");
-    console.log(currentSection, isOpen);
 
     const handleClickOutside = (event: MouseEvent) => {
         const target = event.target as HTMLElement;
@@ -32,27 +31,16 @@ const Navbar = () => {
     }
 
     return (
-        <header className="fixed w-full h-14 bg--100 flex justify-between items-center z-[101]">
+        <header
+            id="navbar-bottom"
+            className="fixed w-full h-14 bg--100 flex justify-between items-center z-[101]"
+        >
             <Drawer
                 isOpen={isOpen}
                 close={close}
                 active={""}
                 setCurrentSection={setCurrentSection}
             />
-            <svg
-                className="absolute top-14 left-0 w-full"
-                height="1"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-            >
-                <line
-                    x1="-4.37114e-08"
-                    y1="0.500122"
-                    x2="1440"
-                    y2="0.499996"
-                    stroke="#272727"
-                />
-            </svg>
             <h1
                 id="navbar-logo"
                 className="flex items-center h-full text-center px-4 z-[101]"
