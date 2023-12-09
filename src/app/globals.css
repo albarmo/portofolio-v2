@@ -57,12 +57,28 @@ progress::-webkit-progress-value {
   border-top: 0.3px dashed #333333;
 }
 
-.marquee {
-  animation: marquee 3s linear infinite;
+.top-border{
+  border-top: 0.3px dashed #333333;
+}
+.left-border{
+  border-left: 0.3px dashed #333333;
+}
+.right-border{
+  border-right: 0.3px dashed #333333;
+}
+.bottom-border{
+  border-bottom: 0.3px dashed #333333;
+}
+.all-border{
+   border: 0.3px dashed #333333;
 }
 
-.marquee2 {
-  animation: marquee2 5s linear infinite;
-  position: absolute;
-  top: 0;
+
+
+.marquee {
+  animation: marquee 10s linear infinite;
+}
+
+.dark-gradient {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.02) 0%, rgba(255, 255, 255, 0.00) 100%)
 }
