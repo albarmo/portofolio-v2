@@ -49,7 +49,7 @@ export default function Home() {
                 <Image
                     src="/assets/ruler.svg"
                     alt="Ruler"
-                    width={1200}
+                    width={300}
                     height={50}
                     className="w-full h-10 md:h-auto"
                 />
