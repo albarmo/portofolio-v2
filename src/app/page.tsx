@@ -47,7 +47,7 @@ export default function Home() {
                     </div>
                 </div>
                 <img
-                    src="/assets/ruler.svg"
+                    src="/assets/ruler.png"
                     alt="Ruler"
                     className="w-full h-10 md:h-auto"
                 />
