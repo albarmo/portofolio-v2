@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function Home() {
     return (
-        <main className="flex min-h-screen flex-col items-center justify-center">
+        <main className="flex min-h-screen flex-col items-center justify-center overflow-x-hidden">
             <div className="flex h-screen w-auto flex-col-reverse md:flex-row justify-center items-center md:space-x-5 tracking-widest">
                 <h1 className="w-full text-center md:text-right text-xl md:text-2xl font-extralight text-[#606061]">
                     <span>
@@ -31,7 +31,7 @@ export default function Home() {
             </div>
             <div className="w-screen">
                 <div className="relative -rotate-1 -mb-2">
-                    <div className="marquee whitespace-nowrap">
+                    <div className="animate-bounce marquee whitespace-nowrap">
                         {STACK_LIST.map((stack, index) => (
                             <span key={index} className="text-sm mx-4">
                                 {stack}
@@ -46,10 +46,12 @@ export default function Home() {
                         </span>
                     </div>
                 </div>
-                <img
-                    src="/assets/ruler.png"
+                <Image
+                    src="/assets/ruler.svg"
                     alt="Ruler"
                     className="w-full h-10 md:h-auto"
+                    width={10}
+                    height={10}
                 />
                 <div className="relative -rotate-1 -mt-4">
                     <div className="marquee animate-marquee whitespace-nowrap ont-extralight">
