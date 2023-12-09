@@ -36,13 +36,13 @@ export default function Home() {
                     All Things Began With <br />
                     <span className="font-bold">How To Do This?!</span>
                 </h2>
-                <section className="w-full grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-10 py-10">
+                <section className="w-full grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6 py-10">
                     {[1, 2, 3, 4, 5, 6, 7, 8].map((item, index) => (
                         <article
                             key={index}
-                            className="p-4 md:p-8 border border-[#232323] rounded dark-gradient overflow-hidden cursor-pointer"
+                            className="p-4 md:p-4 border border-[#232323] rounded dark-gradient overflow-hidden cursor-pointer"
                         >
-                            <h1 className="text-lg md:text-xl">
+                            <h1 className="text-sm md:text-md">
                                 COMPONENT_0{index + 1}
                             </h1>
                         </article>
@@ -50,7 +50,7 @@ export default function Home() {
                 </section>
             </div>
             {/* THE CONCEPTS md:mt-0 p-5 md:p-32 md:pt-0 */}
-            <div className="w-full h-full mt-20 md:px-20">
+            <div className="w-full h-full mt-10 md:px-20">
                 <div className="w-full flex top-border">
                     <section className="right-border p-4 md:w-32"></section>
                     <section className="bottom-border right-border p-4 w-[320px] -ml-8">
@@ -77,7 +77,7 @@ export default function Home() {
                         </svg>
                     </section>
                 </div>
-                <section className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-10 py-10 p-10 md:p-32">
+                <section className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-10 py-10 p-10 md:px-32">
                     {[1, 2, 3, 4, 5, 6, 7, 8].map((item, index) => (
                         <article
                             key={index}
