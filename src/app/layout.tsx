@@ -26,7 +26,9 @@ export default function RootLayout({
 }) {
     return (
         <html lang="en">
-            <body className={`${saira.variable} ${spaceMono.variable}`}>
+            <body
+                className={`${saira.variable} ${spaceMono.variable} overflow-x-hidden`}
+            >
                 <Navbar />
                 {children}
                 <Footer />
