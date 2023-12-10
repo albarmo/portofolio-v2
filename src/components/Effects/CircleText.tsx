@@ -16,7 +16,7 @@ const CircleText = () => {
     }, []);
 
     return (
-        <div className="container-text">
+        <div className="container-text z-50">
             <div className="circle">
                 <p id="text">
                     The &#8226; Future &#8226; Is &#8226; Start &#8226; NO
