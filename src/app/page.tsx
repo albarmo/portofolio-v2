@@ -1,35 +1,56 @@
+import CircleText from "@/components/Effects/CircleText";
 import Marquee from "@/components/Marquee";
+import ProjectGridCanvas from "@/components/ProjectGridCanvas";
 import Image from "next/image";
 
 export default function Home() {
     return (
         <main className="flex min-h-screen flex-col items-center justify-center overflow-x-hidden">
-            <div className="flex h-screen w-auto flex-col-reverse md:flex-row justify-center items-center md:space-x-5 tracking-widest">
-                <h1 className="w-full text-center md:text-right text-xl md:text-2xl font-extralight text-[#606061]">
-                    <span>
-                        ALBAR MOERHAMSA <br />
-                    </span>
-                    <span className="text-justify">
-                        JAKARTA 12430 <br />
-                    </span>
-                    <a className="word fancy">
-                        SOFTWARE ENGINEER <br />
-                    </a>
-                    <span>
-                        +62 812 8070 9980 <br />
-                    </span>
-                    <span>-RESUME</span>
-                    <span>- GITHUB</span>
-                </h1>
-                <Image
-                    src="/assets/proportion-grid.svg"
-                    alt="Proportion Grid"
-                    width={220}
-                    height={100}
-                    className="w-full md:w-auto mb-5 md:mb-0"
-                />
+            <div className="bg-red-100 fixed left-0 bottom-0">
+                <CircleText />
+            </div>
+            <div className="glitch tv-warp h-screen flex justify-center items-center p-10">
+                <div className="flex h-min w-auto flex-col-reverse md:flex-row justify-center items-center md:space-x-5 tracking-widest">
+                    <div className="w-full text-center md:text-right text-xl md:text-2xl font-light text-white">
+                        <span>
+                            <h2
+                                className="hero glitch layers uppercase"
+                                data-text="ELANG"
+                            >
+                                <span>Albarms</span>
+                            </h2>
+                            <br />
+                        </span>
+                        <span className="text-justify">
+                            JAKARTA 12430 <br />
+                        </span>
+                        <h2
+                            className="hero glitch layers uppercase"
+                            data-text="LEARNER"
+                        >
+                            WEB DEVELOPER <br />
+                        </h2>
+                        <br />
+                        <span>
+                            +62 812 8070 9980 <br />
+                        </span>
+                        <span>-RESUME</span>
+                        <span>- GITHUB</span>
+                    </div>
+                    <Image
+                        src="/assets/proportion-grid.svg"
+                        alt="Proportion Grid"
+                        width={220}
+                        height={100}
+                        className="w-full md:w-auto mb-5 md:mb-0"
+                    />
+                </div>
             </div>
             <Marquee />
+            {/* PROJECTS */}
+            <div className="w-full h-full my-20 p-5 md:p-32">
+                <ProjectGridCanvas />
+            </div>
             {/* HOW TO DO THIS */}
             <div className="w-full h-full mt-20 p-5 md:p-32">
                 <h2 className="text-xl">

@@ -43,7 +43,7 @@ const Navbar = () => {
             />
             <h1
                 id="navbar-logo"
-                className="flex items-center h-full text-center px-4 z-[101]"
+                className="flex items-center h-full text-center px-4 z-[101] logo-glitch"
             >
                 <CyberPunkText text="albarms" duration={30} />
             </h1>
