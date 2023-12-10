@@ -20,6 +20,7 @@ body {
   color: #F3F3F3;
   background: linear-gradient(0deg, #0A0A0B 0%, #0A0A0B 100%);
   font-family:var(--font-saira), monospace;
+  overflow-x: hidden;
 }
 
 .saira {

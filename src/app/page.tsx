@@ -52,12 +52,12 @@ export default function Home() {
                 <ProjectGridCanvas />
             </div>
             {/* HOW TO DO THIS */}
-            <div className="w-full h-full mt-20 p-5 md:p-32">
+            <div className="w-full h-full md:mt-20 p-5 md:p-32">
                 <h2 className="text-xl">
                     All Things Began With <br />
                     <span className="font-bold">How To Do This?!</span>
                 </h2>
-                <section className="w-full grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6 py-10">
+                <section className="w-full grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6 py-10 p-0">
                     {[1, 2, 3, 4, 5, 6, 7, 8].map((item, index) => (
                         <article
                             key={index}

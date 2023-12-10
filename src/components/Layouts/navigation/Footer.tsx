@@ -12,7 +12,7 @@ const Footer = () => {
     const [userClicked, setUserClicked] = useState(false);
 
     return (
-        <footer className="w-full h-auto top-border mt-16 flex flex-col md:flex-row justify-between z-[101] bg-black">
+        <footer className="overflow-x-hidden md:overflow-x-scroll w-full h-auto top-border mt-16 flex flex-col md:flex-row justify-between z-[101] bg-black">
             <div className="hidden md:block"></div>
             <div className="md:w-10/12 left-border right-border flex flex-col md:flex-row justify-between">
                 <div className="relative w-full md:w-2/6">
@@ -47,17 +47,17 @@ const Footer = () => {
                         <p>Albar Moerhamsa @2024 All rights reserved. </p>
                     </section>
                 </div>
-                <div className=" p-5  md:p-14 w-full md:w-11/12 flex flex-col md:flex-row justify-between">
-                    <section className=" md:w-9/12 p-0 all-border flex justify-start">
+                <div className=" p-5 md:p-14 w-full lg:w-11/12 flex flex-col lg:flex-row justify-between">
+                    <section className="md:w-9/12 all-border flex flex-col p-5 lg:p-0 md:flex-row justify-start">
                         <Image
                             src="/images/themoer.jpg"
                             alt="THE MOER"
                             width={130}
                             height={130}
-                            className="w-60 object-contain right-border"
+                            className="w-full md:w-60 object-contain right-border bottom-border"
                         />
                         <div className="w-full">
-                            <div className="flex flex-col md:flex-row h-32 justify-between bottom-border">
+                            <div className="flex flex-col md:flex-row md:h-32 justify-between bottom-border">
                                 <section className="px-5 text-sm w-full right-border">
                                     <p className="text-2xl font-semibold">
                                         The Journey
