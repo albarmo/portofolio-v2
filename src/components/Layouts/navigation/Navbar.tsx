@@ -5,6 +5,7 @@ import Image from "next/image";
 import useModalDisclosure from "@/hooks/useModalDisclosure";
 import Drawer from "./Drawer";
 import { usePathname, useRouter } from "next/navigation";
+import Link from "next/link";
 
 const Navbar = () => {
     const router = useRouter();
@@ -54,9 +55,24 @@ const Navbar = () => {
                 className="flex items-center justify-center h-full"
             >
                 <ul className="hidden md:flex items-center justify-center space-x-10 px-10 h-full">
-                    <li>Github</li>
-                    <li>LinkedIn</li>
-                    <li>Resume</li>
+                    <Link href={"https://github.com/albarmo"} target="_blank">
+                        Github
+                    </Link>
+                    <Link
+                        href={
+                            "https://www.linkedin.com/in/albar-moerhamsa-aa21681bb"
+                        }
+                        target="_blank"
+                    >
+                        LinkedIn
+                    </Link>
+                    <Link
+                        href={"/resume/Albar_Moerhamsa.pdf"}
+                        target="_blank"
+                        download
+                    >
+                        Resume
+                    </Link>
                 </ul>
                 <div
                     id="navbar-action"

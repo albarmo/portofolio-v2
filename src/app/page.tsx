@@ -71,8 +71,6 @@ export default function Home() {
                         <span>
                             +62 812 8070 9980 <br />
                         </span>
-                        <span>-RESUME</span>
-                        <span>- GITHUB</span>
                     </div>
                     <Image
                         src="/assets/proportion-grid.svg"
