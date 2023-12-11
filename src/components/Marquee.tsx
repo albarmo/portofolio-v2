@@ -5,7 +5,7 @@ import React from "react";
 const Marquee = () => {
     return (
         <div className="w-screen">
-            <div className="relative -rotate-1 -mb-2">
+            <div className="relative -rotate-1 -mb-3">
                 <div className="animate-marquee  whitespace-nowrap">
                     {STACK_LIST.map((stack, index) => (
                         <span key={index} className="text-sm mx-4">
@@ -13,11 +13,8 @@ const Marquee = () => {
                         </span>
                     ))}
                     <span className="text-xs mx-4">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Eius voluptatibus quasi dicta veniam non odit itaque
-                        possimus assumenda maiores reprehenderit facere, ipsa
-                        exercitationem tempora ab, ratione consectetur,
-                        reiciendis voluptatum impedit.
+                        All of this is my beloved friends on software
+                        development
                     </span>
                 </div>
             </div>
@@ -28,26 +25,21 @@ const Marquee = () => {
                 width={10}
                 height={10}
             />
-            <div className="relative -rotate-1 -mt-4">
+            <div className="relative -rotate-1 -mt-3">
                 <div className="marquee animate-marquee whitespace-nowrap ont-extralight">
                     <span className="text-xs mx-4">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Eius voluptatibus quasi dicta veniam non odit itaque
-                        possimus assumenda maiores reprehenderit facere, ipsa
-                        exercitationem tempora ab, ratione consectetur,
-                        reiciendis voluptatum impedit.
+                        You never change things by fighting the existing
+                        reality. To change something, build a new model that
+                        makes the existing model obsolete
                     </span>
                     <span className="text-xs mx-4">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Eius voluptatibus quasi dicta veniam non odit itaque
-                        possimus assumenda maiores reprehenderit facere, ipsa
-                        exercitationem tempora ab, ratione consectetur,
-                        reiciendis voluptatum impedit.
+                        You never change things by fighting the existing
+                        reality. To change something, build a new model that
+                        makes the existing model obsolete
                     </span>
-                    <span className="text-xs mx-4">Marquee Item 2</span>
-                    <span className="text-xs mx-4">Marquee Item 3</span>
-                    <span className="text-xs mx-4">Marquee Item 4</span>
-                    <span className="text-xs mx-4">Marquee Item 5</span>
+                    <span className="text-xs mx-4">
+                        Create with the heart; build with the mind
+                    </span>
                 </div>
             </div>
         </div>

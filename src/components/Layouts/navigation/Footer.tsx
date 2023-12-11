@@ -66,7 +66,6 @@ const Footer = () => {
                                 <AudioPlayer
                                     autoPlay={false}
                                     src={"/sound/Journey.mp3"}
-                                    onPlay={(e) => console.log("onPlay")}
                                     className="bg-black"
                                     layout="stacked"
                                 />

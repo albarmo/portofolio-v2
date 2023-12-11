@@ -1,14 +1,45 @@
 "use client";
-import CircleText from "@/components/Effects/CircleText";
-import Marquee from "@/components/Marquee";
-import ProjectGridCanvas from "@/components/ProjectGridCanvas";
+import { useState } from "react";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 
+import CircleText from "@/components/Effects/CircleText";
+import Marquee from "@/components/Marquee";
+import Modal from "@/components/Modal";
+import useModalDisclosure from "@/hooks/useModalDisclosure";
+import { PROJECT_LIST } from "@/utils/data";
+
 export default function Home() {
     const router = useRouter();
+    const [projectData, setProjectData] = useState<any>();
+    const { isOpen, open, close } = useModalDisclosure();
     return (
         <main className="flex min-h-screen flex-col items-center justify-center overflow-x-hidden">
+            <Modal
+                title={"Project Detail"}
+                size="md"
+                isOpen={isOpen}
+                close={close}
+            >
+                <div className="container-modal h-[500px] text-white overflow-y-scroll">
+                    <Image
+                        className="block w-full"
+                        src={projectData?.image}
+                        alt={projectData?.title}
+                        width={400}
+                        height={400}
+                    />
+                    <h1 className="my-5 text-xl font-semibold">
+                        {projectData?.title || "Loading Title.."}
+                    </h1>
+                    <div
+                        className="spaceMono font-base text-sm"
+                        dangerouslySetInnerHTML={{
+                            __html: projectData?.description || <></>,
+                        }}
+                    />
+                </div>
+            </Modal>
             <div className="bg-red-100 fixed left-0 bottom-0">
                 <CircleText />
             </div>
@@ -55,7 +86,24 @@ export default function Home() {
             <Marquee />
             {/* PROJECTS */}
             <div id="projects" className="w-full h-full my-20 p-5 md:p-32">
-                <ProjectGridCanvas />
+                <div className="row">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+                        {PROJECT_LIST.map((project, index) => (
+                            <Image
+                                className="block"
+                                key={index}
+                                src={project.image}
+                                alt={"Project Name"}
+                                width={400}
+                                height={400}
+                                onClick={() => {
+                                    setProjectData(project);
+                                    open();
+                                }}
+                            />
+                        ))}
+                    </div>
+                </div>
             </div>
             {/* HOW TO DO THIS */}
             <div id="hwtd" className="w-full h-full md:mt-20 p-5 md:p-32">
