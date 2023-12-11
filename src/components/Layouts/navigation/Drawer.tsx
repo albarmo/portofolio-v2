@@ -1,5 +1,6 @@
 import CyberPunkText from "@/components/Effects/CyberPunkText";
 import { MENU_DRAWER } from "@/utils/data";
+import Link from "next/link";
 import React from "react";
 
 interface IPropsDrawer {
@@ -18,20 +19,20 @@ const DrawerComponent: React.FC<IPropsDrawer> = ({
     return (
         <div
             id="drawer-navigation"
-            className={`z-50 fixed top-0 right-0 h-screen w-full md:w-10/12 lg:w-1/2 xl:w-1/3 overflow-y-auto transition-transform bg-[#000000] flex justify-between items-start overflow-x-hidden
+            className={`z-50 fixed top-0 right-0 h-screen w-full md:w-2/3 xl:w-2/5 overflow-y-hidden transition-transform bg-[#000000] flex justify-between items-start overflow-x-hidden
             ${isOpen ? "" : "translate-x-full"} `}
             tabIndex={-1}
             aria-labelledby="drawer-navigation-label"
         >
             <div
                 id="navbar-top-border"
-                className="overflow-y-auto w-full mt-14 lg:mt-0"
+                className="overflow-y-hidden w-full mt-14 lg:mt-0"
             >
-                <ul className="">
+                <ul className="w-full">
                     {MENU_DRAWER.map((menu: any, index: number) => (
                         <li
                             key={menu?.id}
-                            className="text-left flex w-full justify-start items-start space-x-5 md:space-x-20 pr-20 min-h-max px-5 py-8"
+                            className="h-max text-left flex flex-col md:flex-row w-full justify-start items-start space-x-5 md:space-x-10 pr-20 min-h-max px-5 py-10"
                             id="navbar-menubar"
                         >
                             <section className="flex items-start justify-start space-x-4">
@@ -51,21 +52,27 @@ const DrawerComponent: React.FC<IPropsDrawer> = ({
                             <div className="w-full">
                                 {index <= 1 ? (
                                     menu?.body?.map((item: any) => (
-                                        <section
+                                        <Link
                                             key={item.id}
-                                            className="group flex cursor-pointer p-x-5 w-full"
+                                            href={item.ref}
+                                            onClick={() => {
+                                                close();
+                                                setCurrentSection(item.ref);
+                                            }}
                                         >
-                                            <div className="text-2xl h-max md:text-4xl font-extrabold uppercase z-10 hover:text-black hover:bg-[#CCF96D] hover:mr-3 p-2">
-                                                <CyberPunkText
-                                                    text={item.title}
-                                                    duration={50}
-                                                />
-                                            </div>
-                                            <section className="hidden group-hover:block text-[8px] text-[#CCF96D] font-extralight uppercase">
-                                                Section
-                                                <br /> {item.id}
+                                            <section className="group flex space-y-0 cursor-pointer p-x-5 w-full h-10 md:h-14">
+                                                <div className="text-xl h-max md:text-xl font-extrabold uppercase z-10 hover:text-black hover:bg-[#CCF96D] hover:mr-3 p-2">
+                                                    <CyberPunkText
+                                                        text={item.title}
+                                                        duration={50}
+                                                    />
+                                                </div>
+                                                <section className="hidden group-hover:block text-[8px] text-[#CCF96D] font-extralight uppercase">
+                                                    Section
+                                                    <br /> {item.id}
+                                                </section>
                                             </section>
-                                        </section>
+                                        </Link>
                                     ))
                                 ) : (
                                     <p>{menu?.body}</p>

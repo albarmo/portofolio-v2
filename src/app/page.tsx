@@ -1,15 +1,21 @@
+"use client";
 import CircleText from "@/components/Effects/CircleText";
 import Marquee from "@/components/Marquee";
 import ProjectGridCanvas from "@/components/ProjectGridCanvas";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 
 export default function Home() {
+    const router = useRouter();
     return (
         <main className="flex min-h-screen flex-col items-center justify-center overflow-x-hidden">
             <div className="bg-red-100 fixed left-0 bottom-0">
                 <CircleText />
             </div>
-            <div className="glitch tv-warp h-screen flex justify-center items-center p-10">
+            <div
+                id="beranda"
+                className="glitch tv-warp h-screen flex justify-center items-center p-10"
+            >
                 <div className="flex h-min w-auto flex-col-reverse md:flex-row justify-center items-center md:space-x-5 tracking-widest">
                     <div className="w-full text-center md:text-right text-xl md:text-2xl font-light text-white">
                         <span>
@@ -48,11 +54,11 @@ export default function Home() {
             </div>
             <Marquee />
             {/* PROJECTS */}
-            <div className="w-full h-full my-20 p-5 md:p-32">
+            <div id="projects" className="w-full h-full my-20 p-5 md:p-32">
                 <ProjectGridCanvas />
             </div>
             {/* HOW TO DO THIS */}
-            <div className="w-full h-full md:mt-20 p-5 md:p-32">
+            <div id="hwtd" className="w-full h-full md:mt-20 p-5 md:p-32">
                 <h2 className="text-xl">
                     All Things Began With <br />
                     <span className="font-bold">How To Do This?!</span>
@@ -62,6 +68,8 @@ export default function Home() {
                         <article
                             key={index}
                             className="p-4 md:p-4 border border-[#232323] rounded dark-gradient overflow-hidden cursor-pointer"
+                            onClick={() => router.push(`/detail/COMP${index}`)}
+                            onKeyUp={() => console.log("first")}
                         >
                             <h1 className="text-sm md:text-md">
                                 COMPONENT_0{index + 1}
@@ -71,7 +79,7 @@ export default function Home() {
                 </section>
             </div>
             {/* THE CONCEPTS md:mt-0 p-5 md:p-32 md:pt-0 */}
-            <div className="w-full h-full mt-10 md:px-20">
+            <div id="concepts" className="w-full h-full mt-10 md:px-20">
                 <div className="w-full flex top-border">
                     <section className="right-border p-4 md:w-32"></section>
                     <section className="bottom-border right-border p-4 w-[320px] -ml-8">
@@ -103,6 +111,8 @@ export default function Home() {
                         <article
                             key={index}
                             className="p-3 md:p-4 border border-[#232323] border-dashed rounded dark-gradient overflow-hidden cursor-pointer"
+                            onClick={() => router.push(`/detail/C${index}`)}
+                            onKeyUp={() => console.log("first")}
                         >
                             <h1 className="text-md font-semibold md:text-md">
                                 Built-in Optimizations

@@ -4,9 +4,10 @@ import CyberPunkText from "@/components/Effects/CyberPunkText";
 import Image from "next/image";
 import useModalDisclosure from "@/hooks/useModalDisclosure";
 import Drawer from "./Drawer";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 
 const Navbar = () => {
+    const router = useRouter();
     const pathname = usePathname();
     const { isOpen, open, close } = useModalDisclosure();
 
@@ -41,12 +42,13 @@ const Navbar = () => {
                 active={""}
                 setCurrentSection={setCurrentSection}
             />
-            <h1
+            <button
                 id="navbar-logo"
-                className="flex items-center h-full text-center px-4 z-[101] logo-glitch"
+                className="flex items-center h-full text-center px-4 z-[101] logo-glitch cursor-pointer"
+                onClick={() => router.push("/")}
             >
                 <CyberPunkText text="albarms" duration={30} />
-            </h1>
+            </button>
             <nav
                 id="navbar-action"
                 className="flex items-center justify-center h-full"

@@ -6,7 +6,10 @@ import "react-h5-audio-player/lib/styles.css";
 
 const Footer = () => {
     return (
-        <footer className="overflow-x-hidden md:overflow-x-scroll w-full h-auto top-border mt-16 flex flex-col md:flex-row justify-between z-[101] bg-black">
+        <footer
+            id="backroom"
+            className="overflow-x-hidden md:overflow-x-scroll w-full h-auto top-border mt-16 flex flex-col md:flex-row justify-between z-[101] bg-black"
+        >
             <div className="hidden md:block"></div>
             <div className="md:w-10/12 left-border right-border flex flex-col md:flex-row justify-between">
                 <div className="relative w-full md:w-2/6">
