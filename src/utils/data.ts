@@ -112,3 +112,12 @@ export const PROJECT_LIST = [
         image: "/images/project/TheWay.jpg",
     },
 ];
+
+
+export const SOCIAL_MEDIA_LIST = [
+    { id: 0, platform_name: 'Linked In', profile_link: 'https://www.linkedin.com/in/albar-moerhamsa-aa21681bb', iconPath: '/assets/social/linkedin.svg' },
+    { id: 1, platform_name: 'Github', profile_link: 'https://github.com/albarmo', iconPath: '/assets/social/github.svg' },
+    { id: 2, platform_name: 'NPM', profile_link: '#', iconPath: '/assets/social/npm.svg' },
+    { id: 3, platform_name: 'Figma', profile_link: 'https://www.figma.com/files/drafts?fuid=657399660815615932', iconPath: '/assets/social/figma.svg' },
+    { id: 4, platform_name: 'Instagram', profile_link: 'https://www.instagram.com/albrm_', iconPath: '/assets/social/instagram.svg'},
+]

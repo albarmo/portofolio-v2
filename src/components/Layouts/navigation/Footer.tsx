@@ -1,5 +1,7 @@
 "use client";
+import { SOCIAL_MEDIA_LIST } from "@/utils/data";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 import AudioPlayer from "react-h5-audio-player";
 import "react-h5-audio-player/lib/styles.css";
@@ -34,12 +36,10 @@ const Footer = () => {
                             />
                         </svg>
                     </section>
-                    <section className="px-16 text-sm w-full">
-                        <p>
-                            Make your React component async and await your data.
-                            Next.js supports both server and client data
-                            fetching.
-                        </p>
+                    <section className="px-16 text-sm font-extralight w-full">
+                        <p>+62 812 80709980</p>
+                        <p>moerhamsa@gmail.com</p>
+                        <p>DKI Jakarta, INDONESIA</p>
                         <br />
                         <p>Albar Moerhamsa @2024 All rights reserved. </p>
                     </section>
@@ -73,13 +73,20 @@ const Footer = () => {
                         </div>
                     </section>
                     <section className="grid mt-10 md:mt-0 grid-cols-5 md:grid-cols-2 gap-4">
-                        {[1, 2, 3, 4, 5].map((social, index) => (
-                            <span
+                        {SOCIAL_MEDIA_LIST.map((social, index) => (
+                            <Link
+                                href={social.profile_link}
+                                target="_blank"
                                 key={index}
                                 className="p-2 cursor-pointer bg-slate-100 w-12 h-12 rounded-full text-black flex items-center justify-center"
                             >
-                                {social}
-                            </span>
+                                <Image
+                                    src={social.iconPath}
+                                    alt={social.platform_name}
+                                    width={50}
+                                    height={50}
+                                />
+                            </Link>
                         ))}
                     </section>
                 </div>
