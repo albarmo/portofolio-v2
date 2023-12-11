@@ -58,7 +58,7 @@ const Navbar = () => {
                 </ul>
                 <div
                     id="navbar-action"
-                    className="flex items-center h-full text-center px-4 py-2"
+                    className=" flex items-center h-full text-center px-4 py-2"
                 >
                     <Image
                         src={"/assets/menu-dot.svg"}

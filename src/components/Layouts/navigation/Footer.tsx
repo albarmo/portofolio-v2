@@ -1,16 +1,10 @@
 "use client";
 import Image from "next/image";
-import React, { useState } from "react";
+import React from "react";
 import AudioPlayer from "react-h5-audio-player";
 import "react-h5-audio-player/lib/styles.css";
-// import 'react-h5-audio-player/lib/styles.less' Use LESS
-// import 'react-h5-audio-player/src/styles.scss' Use SASS
 
 const Footer = () => {
-    const audioSource =
-        "https://cdn.pixabay.com/audio/2022/04/25/audio_5d61b5204f.mp3";
-    const [userClicked, setUserClicked] = useState(false);
-
     return (
         <footer className="overflow-x-hidden md:overflow-x-scroll w-full h-auto top-border mt-16 flex flex-col md:flex-row justify-between z-[101] bg-black">
             <div className="hidden md:block"></div>

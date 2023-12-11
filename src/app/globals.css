@@ -31,7 +31,6 @@ body {
   font-family: var(--font-spaceMono);
 }
 
-
 progress::-webkit-progress-bar {
   background-color: #3D3D3D;
 }
