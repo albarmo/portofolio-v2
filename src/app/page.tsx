@@ -8,6 +8,7 @@ import Marquee from "@/components/Marquee";
 import Modal from "@/components/Modal";
 import useModalDisclosure from "@/hooks/useModalDisclosure";
 import { PROJECT_LIST } from "@/utils/data";
+import Experience from "@/components/Experience";
 
 export default function Home() {
     const router = useRouter();
@@ -43,6 +44,7 @@ export default function Home() {
             <div className="bg-red-100 fixed left-0 bottom-0">
                 <CircleText />
             </div>
+            {/* HERO */}
             <div
                 id="beranda"
                 className="glitch tv-warp h-screen flex justify-center items-center p-10"
@@ -123,6 +125,9 @@ export default function Home() {
                         </article>
                     ))}
                 </section>
+            </div>
+            <div id="experience" className="w-full h-full my-20 p-5 md:p-32">
+                <Experience />
             </div>
             {/* THE CONCEPTS md:mt-0 p-5 md:p-32 md:pt-0 */}
             <div id="concepts" className="w-full h-full mt-10 md:px-20">
