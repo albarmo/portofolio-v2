@@ -93,7 +93,7 @@ export default function Home() {
                                 className="block"
                                 key={index}
                                 src={project.image}
-                                alt={"Project Name"}
+                                alt={project.title}
                                 width={400}
                                 height={400}
                                 onClick={() => {
@@ -126,7 +126,7 @@ export default function Home() {
                     ))}
                 </section>
             </div>
-            <div id="experience" className="w-full h-full my-20 p-5 md:p-32">
+            <div id="experience" className="w-full h-full p-0 md:p-32">
                 <Experience />
             </div>
             {/* THE CONCEPTS md:mt-0 p-5 md:p-32 md:pt-0 */}
