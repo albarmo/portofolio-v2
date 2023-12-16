@@ -9,6 +9,8 @@ import Modal from "@/components/Modal";
 import useModalDisclosure from "@/hooks/useModalDisclosure";
 import { PROJECT_LIST } from "@/utils/data";
 import Experience from "@/components/Experience";
+import { ARTICLE_LIST } from "@/utils/sampled-html";
+import { COMPONENT_LIST } from "@/utils/hwtd";
 
 export default function Home() {
     const router = useRouter();
@@ -112,16 +114,18 @@ export default function Home() {
                     <span className="font-bold">How To Do This?!</span>
                 </h2>
                 <section className="w-full grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6 py-10 p-0">
-                    {[1, 2, 3, 4, 5, 6, 7, 8].map((item, index) => (
+                    {COMPONENT_LIST.map((comp, index) => (
                         <article
                             key={index}
                             className="p-4 md:p-4 border border-[#232323] rounded dark-gradient overflow-hidden cursor-pointer"
-                            onClick={() => router.push(`/detail/COMP${index}`)}
+                            onClick={() => router.push(`/detail/component/${comp?.id}`)}
                             onKeyUp={() => console.log("first")}
                         >
                             <h1 className="text-sm md:text-md">
-                                COMPONENT_0{index + 1}
+                               {comp?.id}
                             </h1>
+                            {comp?.component}
+                            <p>{comp?.title}</p>
                         </article>
                     ))}
                 </section>
@@ -158,20 +162,18 @@ export default function Home() {
                     </section>
                 </div>
                 <section className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-10 py-10 p-10 md:px-32">
-                    {[1, 2, 3, 4, 5, 6, 7, 8].map((item, index) => (
+                    {ARTICLE_LIST.map((article, index) => (
                         <article
                             key={index}
                             className="p-3 md:p-4 border border-[#232323] border-dashed rounded dark-gradient overflow-hidden cursor-pointer"
-                            onClick={() => router.push(`/detail/C${index}`)}
+                            onClick={() => router.push(`/detail/article/${article.id}`)}
                             onKeyUp={() => console.log("first")}
                         >
                             <h1 className="text-md font-semibold md:text-md">
-                                Built-in Optimizations
+                               {article?.title}
                             </h1>
                             <p className="text-sm font-light">
-                                Make your React component async and await your
-                                data. Next.js supports both server and client
-                                data fetching.
+                              {article?.description}
                             </p>
                         </article>
                     ))}

@@ -7,8 +7,8 @@ export const MENU_DRAWER = [
             { id: "002", title: "Projects", ref: "/#projects" },
             { id: "003", title: "Experience", ref: "/#hwtd" },
             { id: "004", title: "Story", ref: "#" },
-            { id: "004", title: "The Concept", ref: "#concepts" },
-            { id: "004", title: "Backroom", ref: "#backroom" },
+            { id: "005", title: "The Concept", ref: "#concepts" },
+            { id: "006", title: "Backroom", ref: "#backroom" },
         ],
     },
     {
