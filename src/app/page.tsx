@@ -17,6 +17,7 @@ export default function Home() {
     const router = useRouter();
     const [projectData, setProjectData] = useState<any>();
     const { isOpen, open, close } = useModalDisclosure();
+
     return (
         <main className="flex min-h-screen flex-col items-center justify-center overflow-x-hidden">
             <Modal
@@ -50,35 +51,49 @@ export default function Home() {
             {/* HERO */}
             <div
                 id="beranda"
-                className="h-screen flex flex-col justify-center items-center"
+                className="h-min"
             >
-                <div className="absolute w-screen h-full">
-                    <Lanyard />
-                </div>
-                <div className="flex flex-col h-screen space-y-5 w-auto md:flex-col justify-center items-center">
+                <div className="flex flex-col h-min pt-36 space-y-5 w-auto md:flex-col justify-center items-center">
                     <p>Front-end . Software Engineer . Back-End</p>
                     <h1 className="text-[60px] leading-[50px] md:text-[90px] font-black uppercase md:leading-[75px] text-center" >intuitive<span className="text-[#CCF96D]"> and <br />visually</span> user <br /> experiences</h1>
                     <p className="w-2/3 text-center">I craft intuitive and visually stunning web interfaces that blend creativity with functionality, delivering seamless user experiences that bring ideas to life.</p>
                 </div>
             </div>
+            <div className="w-screen h-[600px]">
+                <Lanyard />
+            </div>
             <Marquee />
             {/* PROJECTS */}
-            <div id="projects" className="w-full h-full my-20 p-5 md:p-32">
+            <div id="projects" className="w-full h-full my-20 p-5 md:px-32">
+                <h2 className="text-4xl uppercase my-5">
+                    Work<span className="font-semibold text-[#CCF96D] italic">Space</span>
+                </h2>
                 <div className="row">
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
                         {PROJECT_LIST.map((project, index) => (
-                            <Image
-                                className="block"
-                                key={index}
-                                src={project.image}
-                                alt={project.title}
-                                width={400}
-                                height={400}
-                                onClick={() => {
-                                    setProjectData(project);
-                                    open();
-                                }}
-                            />
+                            <div className="relative" key={index}>
+                                <div className="h-60 bg-[#CCF96D] rounded-lg" />
+                                <article
+                                    className="group absolute right-2 bottom-1 h-60 rounded-lg border border-[#76F96D] cursor-pointer"
+                                    style={{
+                                        background: `url(${project.image})`,
+                                        backgroundSize: "cover",
+                                        backgroundPosition: "center",
+                                        backgroundRepeat: 'no-repeat'
+                                    }}
+                                >
+                                    <section className="invisible group-hover:visible flex-col justify-between w-full h-full">
+                                        <section className="w-full p-0">
+                                            <div className="bg-[#CCF96D] px-1 rounded-sm text-sm text-green-700">
+                                                <h1 className="uppercase text-lg font-bold text-black">
+                                                    Interactive static Housing map
+                                                </h1>
+                                            </div>
+                                            <span className="bg-[#CCF96D] px-1 rounded-sm text-sm text-green-700">Web Application</span>
+                                        </section>
+                                    </section>
+                                </article>
+                            </div>
                         ))}
                     </div>
                 </div>

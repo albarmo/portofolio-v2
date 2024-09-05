@@ -242,30 +242,6 @@ const Experience = () => {
                         fill="#9B9B9B"
                     />
                 </svg>
-                {/* <div className="w-full">
-                <section className="absolute top-24 left-40 w-96">
-                    <h1 className="font-semibold">
-                        PT. Entrepreneur Trust Digital
-                    </h1>
-                    <p>
-                        Asigned as Frontend Engineer on one biggest Bank in
-                        Indonesia (BRI). Jakarta Metropolitan Area, NextJS,
-                        Tailwind
-                    </p>
-                </section>
-                <section className="absolute top-16 -right-10 w-96">
-                    <h1 className="font-light text-xl mt-2">2022 - 2025</h1>
-                </section>
-                <section className="absolute top-32 right-2 w-96">
-                    <p className="text-xs w-60 text-justify">
-                        Asigned as Frontend Engineer on one biggest Bank in
-                        Indonesia (BRI). Jakarta Metropolitan Area, NextJS,
-                        TailwindAsigned as Frontend Engineer on one biggest Bank
-                        in Indonesia (BRI). Jakarta Metropolitan Area, NextJS,
-                        Tailwind
-                    </p>
-                </section>
-            </div> */}
             </div>
         </div>
     );

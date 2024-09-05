@@ -19,7 +19,7 @@ const CircleText = () => {
         <div className="container-text z-50">
             <div className="circle">
                 <p id="text" className="text-[#D5D5D5]">
-                    intuitive and visually user experiences
+                    {" "} intuitive and visually user experiences  &#8226; {" "}
                 </p>
             </div>
         </div>

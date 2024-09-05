@@ -1,4 +1,4 @@
-//@ts-nocheck
+// @ts-nocheck
 
 import * as THREE from 'three'
 import { useEffect, useRef, useState } from 'react'
@@ -6,12 +6,52 @@ import { Canvas, extend, useThree, useFrame } from '@react-three/fiber'
 import { useGLTF, useTexture, Environment, Lightformer } from '@react-three/drei'
 import { BallCollider, CuboidCollider, Physics, RigidBody, useRopeJoint, useSphericalJoint } from '@react-three/rapier'
 import { MeshLineGeometry, MeshLineMaterial } from 'meshline'
+import anime from "animejs/lib/anime.es.js";
 
 extend({ MeshLineGeometry, MeshLineMaterial })
 useGLTF.preload('/landyard/tag.glb')
 useTexture.preload('/landyard/tag-band.png')
 
 export default function Lanyard() {
+    const containerRef = useRef(null);
+    const [isVisible, setIsVisible] = useState<boolean>(false);
+
+    const callbackFunction = (entires: any) => {
+        const [entry] = entires;
+        setIsVisible(entry.isIntersecting);
+    };
+
+    useEffect(() => {
+        const options = {
+            root: null,
+            rootMargin: "0px",
+            treshold: 1,
+        };
+
+        const observer = new IntersectionObserver(callbackFunction, options);
+        if (containerRef.current) observer.observe(containerRef.current);
+
+        return () => {
+            if (containerRef.current) observer.unobserve(containerRef.current);
+        };
+    }, [containerRef]);
+
+    const animate = () => {
+        anime({
+            targets: ".st0, .st1",
+            strokeDashoffset: [anime.setDashoffset, 0],
+            easing: "cubicBezier(.5, .05, .1, .3)",
+            duration: 1000,
+            delay: function (el, i) {
+                return i * 250;
+            },
+        });
+    };
+
+    useEffect(() => {
+        if (isVisible) animate();
+    }, [isVisible]);
+
     return (
         <Canvas camera={{ position: [0, 0, 13], fov: 25 }}>
             <ambientLight intensity={Math.PI} />

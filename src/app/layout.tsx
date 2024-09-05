@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Space_Mono, Saira } from "next/font/google";
 import "./globals.css";
+
 import Navbar from "@/components/Layouts/navigation/Navbar";
 import Footer from "@/components/Layouts/navigation/Footer";
 
