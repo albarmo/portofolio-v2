@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 const ProgressBar = () => {
     const router = useRouter();
     const [progress, setProgress] = useState(0);
+
     useEffect(() => {
         let temp = 0;
         const interval = setInterval(
@@ -11,32 +12,29 @@ const ProgressBar = () => {
                 if (temp >= 99) {
                     clearInterval(interval);
                     setTimeout(() => {
-                        router.replace("/");
+                        router.push("/");
                     }, 1000);
                 }
                 temp++;
                 setProgress(temp);
             },
-            progress >= 10 ? 50000 : undefined
+            undefined
         );
         setProgress(temp);
     }, []);
 
     return (
-        <>
+        <section className="flex flex-col w-full justify-between">
             <progress
                 id="progressBar"
                 value={progress}
                 max="100"
-                className="h-[2px] w-full mb-2 bg-fuchsia-500"
+                className="h-[1px] w-full bg-green-500"
             />
-            <section className="flex justify-between">
-                <p className="text-xs">
-                    Loading <span>${progress}%</span>
-                </p>
-                <p className="text-xs">mounting resources</p>
+            <section className="flex justify-center items-center m-0">
+                <p className="text-xs">{progress}%</p>
             </section>
-        </>
+        </section>
     );
 };
 

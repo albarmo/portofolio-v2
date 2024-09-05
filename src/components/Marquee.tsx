@@ -2,48 +2,48 @@ import { STACK_LIST } from "@/utils/data";
 import Image from "next/image";
 import React from "react";
 
-const Marquee = () => {
+import Marquee from 'react-fast-marquee';
+
+type PartnerType = {
+    id: number | string;
+    name: string;
+    image: string;
+    link: string;
+};
+
+const PARTNER_LIST: PartnerType[] = [
+    { id: 0, name: 'Partner 1', image: '/images/albarm-white-logo.svg', link: '/' },
+    { id: 1, name: 'Partner 2', image: '/images/albarm-white-logo.svg', link: '/' },
+    { id: 2, name: 'Partner 3', image: '/images/albarm-white-logo.svg', link: '/' },
+    { id: 3, name: 'Partner 4', image: '/images/albarm-white-logo.svg', link: '/' },
+    { id: 4, name: 'Partner 5', image: '/images/albarm-white-logo.svg', link: '/' },
+    { id: 0, name: 'Partner 1', image: '/images/albarm-white-logo.svg', link: '/' },
+    { id: 1, name: 'Partner 2', image: '/images/albarm-white-logo.svg', link: '/' },
+    { id: 2, name: 'Partner 3', image: '/images/albarm-white-logo.svg', link: '/' },
+    { id: 3, name: 'Partner 4', image: '/images/albarm-white-logo.svg', link: '/' },
+    { id: 4, name: 'Partner 5', image: '/images/albarm-white-logo.svg', link: '/' }
+];
+
+
+const MarqueeList = () => {
     return (
-        <div className="w-screen">
-            <div className="relative -rotate-1 -mb-3">
-                <div className="animate-marquee  whitespace-nowrap">
-                    {STACK_LIST.map((stack, index) => (
-                        <span key={index} className="text-sm mx-4">
-                            {stack}
-                        </span>
+        <div className="flex w-full h-min justify-center md:h-24">
+            <Marquee speed={200}>
+                <div className="flex items-center justify-center space-x-20">
+                    {PARTNER_LIST.map((partner) => (
+                        <Image
+                            key={partner.id}
+                            className=" object-contain grayscale hover:grayscale-0 size-10"
+                            src={partner?.image}
+                            alt={partner.name}
+                            width={60}
+                            height={60}
+                        />
                     ))}
-                    <span className="text-xs mx-4">
-                        All of this is my beloved friends on software
-                        development
-                    </span>
                 </div>
-            </div>
-            <Image
-                src="/assets/ruler.svg"
-                alt="Ruler"
-                className="w-full h-10 md:h-auto"
-                width={10}
-                height={10}
-            />
-            <div className="relative -rotate-1 -mt-3">
-                <div className="marquee animate-marquee whitespace-nowrap ont-extralight">
-                    <span className="text-xs mx-4">
-                        You never change things by fighting the existing
-                        reality. To change something, build a new model that
-                        makes the existing model obsolete
-                    </span>
-                    <span className="text-xs mx-4">
-                        You never change things by fighting the existing
-                        reality. To change something, build a new model that
-                        makes the existing model obsolete
-                    </span>
-                    <span className="text-xs mx-4">
-                        Create with the heart; build with the mind
-                    </span>
-                </div>
-            </div>
+            </Marquee>
         </div>
     );
 };
 
-export default Marquee;
+export default MarqueeList;

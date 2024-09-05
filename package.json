@@ -10,14 +10,21 @@
   },
   "dependencies": {
     "@panzoom/panzoom": "^4.5.1",
+    "@react-three/drei": "^9.112.0",
+    "@react-three/fiber": "^8.17.6",
+    "@react-three/rapier": "^1.4.0",
     "animejs": "^3.2.2",
     "circletype": "^2.3.0",
+    "leva": "^0.9.35",
+    "meshline": "^3.3.1",
     "next": "14.0.4",
     "parallax-js": "^3.1.0",
     "react": "^18",
     "react-audio-spectrum": "^0.1.0",
     "react-dom": "^18",
-    "react-h5-audio-player": "^3.9.0"
+    "react-fast-marquee": "^1.6.5",
+    "react-h5-audio-player": "^3.9.0",
+    "three": "^0.168.0"
   },
   "devDependencies": {
     "@types/animejs": "^3.1.12",

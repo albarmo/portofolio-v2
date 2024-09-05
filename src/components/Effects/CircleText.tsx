@@ -18,9 +18,8 @@ const CircleText = () => {
     return (
         <div className="container-text z-50">
             <div className="circle">
-                <p id="text">
-                    The &#8226; Future &#8226; Is &#8226; Start &#8226; NO
-                    &#8226;
+                <p id="text" className="text-[#D5D5D5]">
+                    intuitive and visually user experiences
                 </p>
             </div>
         </div>

@@ -2,18 +2,16 @@ import CyberPunkText from "@/components/Effects/CyberPunkText";
 import { MENU_DRAWER } from "@/utils/data";
 import Link from "next/link";
 import React from "react";
-
 interface IPropsDrawer {
     isOpen: boolean;
     close: () => void;
-    active: string;
     setCurrentSection: (ref: string) => void;
 }
+
 
 const DrawerComponent: React.FC<IPropsDrawer> = ({
     isOpen,
     close,
-    active,
     setCurrentSection,
 }) => {
     return (

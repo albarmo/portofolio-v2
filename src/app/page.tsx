@@ -11,6 +11,7 @@ import { PROJECT_LIST } from "@/utils/data";
 import Experience from "@/components/Experience";
 import { ARTICLE_LIST } from "@/utils/sampled-html";
 import { COMPONENT_LIST } from "@/utils/hwtd";
+import Lanyard from "@/components/Model/Lanyard";
 
 export default function Home() {
     const router = useRouter();
@@ -49,40 +50,15 @@ export default function Home() {
             {/* HERO */}
             <div
                 id="beranda"
-                className="glitch tv-warp h-screen flex justify-center items-center p-10"
+                className="h-screen flex flex-col justify-center items-center"
             >
-                <div className="flex h-min w-auto flex-col-reverse md:flex-row justify-center items-center md:space-x-5 tracking-widest">
-                    <div className="w-full text-center md:text-right text-xl md:text-2xl font-light text-white">
-                        <span>
-                            <h2
-                                className="hero glitch layers uppercase"
-                                data-text="ELANG"
-                            >
-                                <span>Albarms</span>
-                            </h2>
-                            <br />
-                        </span>
-                        <span className="text-justify">
-                            JAKARTA 12430 <br />
-                        </span>
-                        <h2
-                            className="hero glitch layers uppercase"
-                            data-text="LEARNER"
-                        >
-                            WEB DEVELOPER <br />
-                        </h2>
-                        <br />
-                        <span>
-                            +62 812 8070 9980 <br />
-                        </span>
-                    </div>
-                    <Image
-                        src="/assets/proportion-grid.svg"
-                        alt="Proportion Grid"
-                        width={220}
-                        height={100}
-                        className="w-full md:w-auto mb-5 md:mb-0"
-                    />
+                <div className="absolute w-screen h-full">
+                    <Lanyard />
+                </div>
+                <div className="flex flex-col h-screen space-y-5 w-auto md:flex-col justify-center items-center">
+                    <p>Front-end . Software Engineer . Back-End</p>
+                    <h1 className="text-[60px] leading-[50px] md:text-[90px] font-black uppercase md:leading-[75px] text-center" >intuitive<span className="text-[#CCF96D]"> and <br />visually</span> user <br /> experiences</h1>
+                    <p className="w-2/3 text-center">I craft intuitive and visually stunning web interfaces that blend creativity with functionality, delivering seamless user experiences that bring ideas to life.</p>
                 </div>
             </div>
             <Marquee />
@@ -122,7 +98,7 @@ export default function Home() {
                             onKeyUp={() => console.log("first")}
                         >
                             <h1 className="text-sm md:text-md">
-                               {comp?.id}
+                                {comp?.id}
                             </h1>
                             {comp?.component}
                             <p>{comp?.title}</p>
@@ -170,10 +146,10 @@ export default function Home() {
                             onKeyUp={() => console.log("first")}
                         >
                             <h1 className="text-md font-semibold md:text-md">
-                               {article?.title}
+                                {article?.title}
                             </h1>
                             <p className="text-sm font-light">
-                              {article?.description}
+                                {article?.description}
                             </p>
                         </article>
                     ))}
