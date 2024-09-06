@@ -69,12 +69,12 @@ export default function Home() {
                     Work<span className="font-semibold text-[#CCF96D] italic">Space</span>
                 </h2>
                 <div className="row">
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 p-5 md:p-0">
                         {PROJECT_LIST.map((project, index) => (
                             <div className="relative" key={index}>
                                 <div className="h-60 bg-[#CCF96D] rounded-lg" />
                                 <article
-                                    className="group absolute right-2 bottom-1 h-60 rounded-lg border border-[#76F96D] cursor-pointer"
+                                    className="group absolute right-2 bottom-1 h-60 w-full rounded-lg border border-[#76F96D] cursor-pointer"
                                     style={{
                                         background: `url(${project.image})`,
                                         backgroundSize: "cover",

@@ -30,6 +30,7 @@ export default function RootLayout({
             <body
                 className={`${saira.variable} ${spaceMono.variable} overflow-x-hidden`}
             >
+                <link rel="icon" href="/albarms-favicon.png" sizes="any" />
                 <Navbar />
                 {children}
                 <Footer />
