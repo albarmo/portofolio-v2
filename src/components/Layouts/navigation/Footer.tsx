@@ -9,15 +9,15 @@ import "react-h5-audio-player/lib/styles.css";
 const Footer = () => {
     return (
         <footer
-            id="backroom"
+            id="contact"
             className="overflow-x-hidden md:overflow-x-scroll w-full h-auto top-border mt-16 flex flex-col md:flex-row justify-between z-[101] bg-black"
         >
             <div className="hidden md:block"></div>
             <div className="md:w-10/12 left-border right-border flex flex-col md:flex-row justify-between">
                 <div className="relative w-full md:w-2/6">
                     <section className="relative right-border bottom-border -ml-10">
-                        <p className="pl-20 text-3xl font-semibold">
-                            THE BACKROOM
+                        <p className="pl-20 text-xl">
+                            LETS CONNECTED
                         </p>
                         <svg
                             width="110"
@@ -45,7 +45,7 @@ const Footer = () => {
                     </section>
                 </div>
                 <div className=" p-5 md:p-14 w-full lg:w-11/12 flex flex-col lg:flex-row justify-between">
-                    <section className="md:w-9/12 all-border flex flex-col p-5 lg:p-0 md:flex-row justify-start">
+                    <section className="md:w-9/12 all-border hidden md:flex flex-col p-5 lg:p-0 md:flex-row justify-start invisible">
                         <Image
                             src="/images/themoer.jpg"
                             alt="THE MOER"
