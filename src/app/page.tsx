@@ -86,7 +86,7 @@ export default function Home() {
                                         <section className="w-full p-0">
                                             <div className="bg-[#CCF96D] px-1 rounded-sm text-sm text-green-700">
                                                 <h1 className="uppercase text-lg font-bold text-black">
-                                                    Interactive static Housing map
+                                                    {project.title}
                                                 </h1>
                                             </div>
                                             <span className="bg-[#CCF96D] px-1 rounded-sm text-sm text-green-700">Web Application</span>
