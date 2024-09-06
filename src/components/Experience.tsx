@@ -51,7 +51,7 @@ const Experience = () => {
                     viewBox="0 0 1440 851"
                     style={{
                         fill: "none",
-                        stroke: "#232323",
+                        stroke: "#CCF96D",
                         objectFit: "contain",
                     }}
                 >

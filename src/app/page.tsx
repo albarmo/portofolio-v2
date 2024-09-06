@@ -146,7 +146,7 @@ export default function Home() {
                                 cx="49"
                                 cy="49"
                                 r="48.5"
-                                stroke="#232323"
+                                stroke="#CCF96D"
                                 stroke-dasharray="2 2"
                             />
                         </svg>
