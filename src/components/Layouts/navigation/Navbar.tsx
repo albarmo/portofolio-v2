@@ -35,14 +35,14 @@ const Navbar = () => {
     return (
         <header
             id="navbar-bottom"
-            className="fixed w-full h-16 bg--100 flex justify-between items-center z-[101] bg-[#0A0A0B]"
+            className="fixed w-full h-16 flex justify-between items-center z-[101] bg-[#0A0A0B]"
         >
             <Drawer
                 isOpen={isOpen}
                 close={close}
                 setCurrentSection={setCurrentSection}
             />
-            <Image src='/images/albarm-workspace-logo.svg' alt="Albarms Workspace" className="cursor-pointer object-contain mx-5" width={180} height={100} onClick={() => router.push("/")} />
+            <Image src='/images/albarm-workspace-logo.svg' alt="Albarms Workspace" className="cursor-pointer object-contain mx-5" width={140} height={100} onClick={() => router.push("/")} />
             <nav
                 id="navbar-action"
                 className="flex items-center justify-center h-full"

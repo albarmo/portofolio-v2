@@ -56,7 +56,7 @@ progress::-webkit-progress-value {
 }
 
 #navbar-bottom {
-    border-bottom: 0.2px solid #333333;
+    border-bottom: 0.3px dashed #333333;
 }
 
 #navbar-logo {
@@ -717,8 +717,7 @@ section {
     stroke-dashoffset: 0;
   }
 } */
-
-.isVisible {
+*/ .isVisible {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -729,4 +728,43 @@ section {
     color: rgb(32, 36, 41);
     font-size: 20px;
     padding: 40px;
+}
+
+.path-a {
+    stroke: #ccf96d;
+    stroke-width: 1.5;
+    opacity: 0%;
+    stroke-dasharray: 100 500;
+    animation: dashA 5s both alternate infinite;
+}
+@keyframes dashA {
+    from {
+        stroke-width: 2.5;
+        stroke: #cdf96d92;
+        opacity: 25%;
+        stroke-dashoffset: 822;
+    }
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+.path-m {
+    stroke: #ccf96d;
+    stroke-width: 1.5;
+    opacity: 0%;
+    stroke-dasharray: 250 1200;
+    animation: dashM 5s both alternate infinite;
+}
+
+@keyframes dashM {
+    from {
+        stroke-width: 2.5;
+        stroke: #cdf96d92;
+        opacity: 25%;
+        stroke-dashoffset: 822;
+    }
+    to {
+        stroke-dashoffset: 0;
+    }
 }
