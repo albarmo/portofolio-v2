@@ -717,7 +717,7 @@ section {
     stroke-dashoffset: 0;
   }
 } */
-*/ .isVisible {
+.isVisible {
     display: flex;
     justify-content: center;
     align-items: center;
