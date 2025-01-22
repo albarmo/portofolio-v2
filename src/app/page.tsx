@@ -4,10 +4,10 @@ import Image from "next/image";
 import { useRouter } from "next/navigation";
 
 import CircleText from "@/components/Effects/CircleText";
-import Marquee from "@/components/Marquee";
+import StackIcon from "tech-stack-icons";
 import Modal from "@/components/Modal";
 import useModalDisclosure from "@/hooks/useModalDisclosure";
-import { PROJECT_LIST } from "@/utils/data";
+import { PROJECT_LIST, STACK_LIST } from "@/utils/data";
 import Experience from "@/components/Experience";
 import { ARTICLE_LIST } from "@/utils/sampled-html";
 import { COMPONENT_LIST } from "@/utils/hwtd";
@@ -70,7 +70,22 @@ export default function Home() {
             <div className="w-screen h-[600px]">
                 <Lanyard />
             </div>
-            {/* <Marquee /> */}
+            {/* TECH STACK */}
+            <div id="projects" className="w-full h-full p-5 md:px-32">
+                <h2 className="text-4xl uppercase my-5">
+                    Tech<span className="font-semibold text-[#CCF96D] italic">Stack</span>
+                </h2>
+                <div className="row">
+                    <div className='inline-flex w-screen snap-x snap-proximity flex-nowrap space-x-5 overflow-x-scroll py-2'>
+                        {STACK_LIST.map((tech, index) => (
+                            <div className="relative snap-center text-center" key={index}>
+                                <StackIcon name={tech.toLowerCase()} className="w-32 h-10" />
+                                <span className="capitalize">{tech}</span>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </div>
             {/* PROJECTS */}
             <div id="projects" className="w-full h-full my-20 p-5 md:px-32">
                 <h2 className="text-4xl uppercase my-5">
@@ -90,14 +105,14 @@ export default function Home() {
                                         backgroundRepeat: 'no-repeat'
                                     }}
                                 >
-                                    <section className="invisible group-hover:visible flex-col justify-between w-full h-full">
+                                    <section className="bg-[#CCF96D]/25 group-hover:bg-transparent flex-col justify-between w-full h-full transform-gpu transition-all delay-75">
                                         <section className="w-full p-0">
-                                            <div className="bg-[#CCF96D] px-1 rounded-sm text-sm text-green-700">
-                                                <h1 className="uppercase text-lg font-bold text-black">
+                                            <div className="bg-[#CCF96D] w-max px-1 rounded-sm text-sm text-green-700">
+                                                <h1 className=" text-lg text-gray-900 font-bold italic">
                                                     {project.title}
                                                 </h1>
                                             </div>
-                                            <span className="bg-[#CCF96D] px-1 rounded-sm text-sm text-green-700">Web Application</span>
+                                            <span className="bg-[#CCF96D] w-max px-1 rounded-sm text-sm text-green-700">Web Application</span>
                                         </section>
                                     </section>
                                 </article>
