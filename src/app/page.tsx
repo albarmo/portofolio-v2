@@ -61,10 +61,6 @@ export default function Home() {
                 </div>
             </div>
 
-            <div className="w-full p-5 md:p-24 md:space-y-10 bg-black/50 bg-contain bg-center">
-                <BoringText />
-            </div>
-
             {/* TECH STACK */}
             <div className="w-full p-5 md:p-24 md:space-y-10 bg-black/50 bg-contain bg-center">
                 <section className="space-y-5">

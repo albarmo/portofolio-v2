@@ -3,28 +3,24 @@
 }
 
 :root {
-  --gold: #ffb338;
-  --light-shadow: #77571d;
-  --dark-shadow: #3e2904;
+  --gold: #4fff38;
+  --light-shadow: #1c9665;
+  --dark-shadow: #043e2a;
 }
-body {
-  margin: 0;
-}
+
 .wrapper {
-  background: radial-gradient(#272727, #1b1b1b);
   display: grid;
   grid-template-areas: "overlap";
   place-content: center;
   text-transform: uppercase;
-  height: 100vh;
+  height: max-content;
 }
 .wrapper > div {
   background-clip: text;
   -webkit-background-clip: text;
-  color: #363833;
-  font-family: "Poppins", sans-serif;
+  color: #ffffff;
   font-weight: 900;
-  font-size: clamp(3em, 18vw, 15rem);
+  font-size: clamp(1em, 5vw, 10rem);
   grid-area: overlap;
   letter-spacing: 1px;
   -webkit-text-stroke: 4px transparent;

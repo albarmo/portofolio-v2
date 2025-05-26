@@ -57,19 +57,19 @@ const Navbar = () => {
 
                     <Link
                         href={"/portfolio"}
-                        className="hover:text-[#CCF96D]"
+                        className={pathname === "/portfolio" ? "text-[#CCF96D]" : "hover:text-[#CCF96D]"}
                     >
                         Portfolio
                     </Link>
                     <Link
                         href={"/about"}
-                        className="hover:text-[#CCF96D]"
+                        className={pathname === "/about" ? "text-[#CCF96D]" : "hover:text-[#CCF96D]"}
                     >
                         About
                     </Link>
                     <Link
                         href={"/contact"}
-                        className="hover:text-[#CCF96D]"
+                        className={pathname === "/contact" ? "text-[#CCF96D]" : "hover:text-[#CCF96D]"}
                     >
                         Contact
                     </Link>

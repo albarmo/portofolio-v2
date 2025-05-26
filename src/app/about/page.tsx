@@ -1,86 +1,24 @@
 import Image from "next/image";
 import StackIcon from "tech-stack-icons";
 
-const TEAMS = [
+const Gallery = [
     {
-        name: "Prasetya Kusumo",
-        title: "Co-Founder / CEO",
-        image_url: "/images/people-1.png",
+        name: "Localoka",
+        title: "Bank Rakyat Indonesia  x Pari",
+        image_url: "https://cdn.linkumkm.id/uploads/library/6/5/3/4/6/65346_840x576.jpeg",
         location: "Jakarta, Indonesia",
     },
     {
-        name: "Bambang Wacana",
-        title: "Co-Founder / CTO",
-        image_url: "/images/people-2.png",
+        name: "Delima",
+        title: "Bank Rakyat Indonesia",
+        image_url: "https://stitmadani.ac.id/wp-content/uploads/2023/11/4.jpg",
         location: "Jakarta, Indonesia",
     },
     {
-        name: "Adinata Dongoran",
-        title: "Business Relations",
+        name: "Laksana",
+        title: "Tricora",
         image_url: "/images/people-3.png",
         location: "Jakarta, Indonesia",
-    },
-    {
-        name: "Jefri Pranowo",
-        title: "Front-end Developer",
-        image_url: "/images/people-4.png",
-        location: "Jakarta, Indonesia",
-    },
-];
-
-const STATS = [
-    {
-        title: "ISO302",
-        description: "Web Certification",
-    },
-    {
-        title: "250+",
-        description: "Projects",
-    },
-    {
-        title: "80+",
-        description: "Clients",
-    },
-];
-
-const POINTS = [
-    {
-        title: "Two-way synchronization",
-        description:
-            "Integrate your task tracker with GitHub to sync changes instantly.",
-    },
-    {
-        title: "Private tasks",
-        description:
-            "Integration and management of multiple data repositories effectively.",
-    },
-    {
-        title: "Fast Development",
-        description:
-            "Integration and management of multiple data repositories effectively.",
-    },
-];
-
-const FEATURES = [
-    {
-        title: "Flexibility and Scalability",
-        description:
-            "Build adaptable, modular systems that grow with your needs.",
-    },
-    {
-        title: "Faster Time-to-Market",
-        description:
-            "Rapidly develop and deploy features using reusable components.",
-    },
-    {
-        title: "Cost Efficiency",
-        description:
-            "Lower costs by reusing components and optimizing resources.",
-    },
-    {
-        title: "Future-Proofing",
-        description:
-            "Easily integrate new technologies and updates without disruption.",
     },
 ];
 
@@ -190,131 +128,44 @@ export default function AboutPage() {
             <div className="relative seperator-wrapper md:h-lvh flex flex-col items-center justify-center">
                 <section className=" p-5 z-10 pt-28 flex flex-col justify-center items-center md:px-32 space-y-5 text-center">
                     <h1 className="text-5xl md:text-7xl font-medium shadow" >
-                        We love creators
+                        Great ideas,
                         <br />{" "}
-                        <span className="font-bold">on time-every time.</span>
+                        <span className="font-bold">deserve great execution.</span>
                     </h1>
                     <p className="text-lg md:w-1/2 leading-6 pb-5">
-                        Anim aute id magna aliqua ad ad non deserunt sunt. Qui
-                        irure qui lorem cupidatat commodo. Elit sunt amet fugiat
-                        veniam occaecat fugiat.
+                        Front-end specialist with 4+ years of experience delivering responsive, high-performance apps.
                     </p>
                 </section>
-                <section className="p-5 space-x-10 z-40 flex justify-start items-start md:px-32 space-y-5 text-balance">
+                <section className="p-10 space-x-10 z-40 flex justify-start items-start md:px-32 space-y-5 md:space-y-0 text-balance">
                     <p>
-                        Faucibus commodo massa rhoncus, volutpat. Dignissim sed
-                        eget risus enim. Mattis mauris semper sed amet vitae sed
-                        turpis id. Id dolor praesent donec est. Odio penatibus
-                        risus viverra tellus varius sit neque erat velit.
-                        Faucibus commodo massa rhoncus, volutpat. Dignissim sed
-                        eget risus enim. Mattis mauris semper sed amet vitae sed
-                        turpis id.
+                        I’m a software engineer with a deep passion for front-end development, design systems, and crafting user-centric digital experiences. With over three years of hands-on experience, I specialize in building fast, responsive, and scalable web applications that bridge the gap between beautiful design and clean, maintainable code.
                         <br />
                         <br />
-                        Et vitae blandit facilisi magna lacus commodo. Vitae
-                        sapien duis odio id et. Id blandit molestie auctor
-                        fermentum dignissim. Lacus diam tincidunt ac cursus in
-                        vel. Mauris varius vulputate et ultrices hac adipiscing
-                        egestas.
+                        I believe great software is more than just functionality — it’s about clarity, performance, and empathy. That’s why I bring a design-first mindset into my engineering work, focusing on delivering seamless user interfaces and robust architectures that scale.
                     </p>
                     <p>
-                        Erat pellentesque dictumst ligula porttitor risus eget
-                        et eget. Ultricies tellus felis id dignissim eget. Est
-                        augue maecenas risus nulla ultrices congue nunc tortor.
-                        Enim et nesciunt doloremque nesciunt voluptate.
+                        Currently, I’m building Laksana, powerful event management platform built specifically for outdoor activities and adventure competitions such as climbing, orienteering, trail runs, and community events. It empowers organizing teams to run seamless, efficient, and well-documented events — from preparation to wrap-up.
                         <br />
                         <br />
-                        Et vitae blandit facilisi magna lacus commodo. Vitae
-                        sapien duis odio id et. Id blandit molestie auctor
-                        fermentum dignissim. Lacus diam tincidunt ac cursus in
-                        vel. Mauris varius vulputate et ultrices hac adipiscing
-                        egestas. Iaculis convallis ac tempor et ut. Ac lorem vel
-                        integer orci.
+                        I don't just ship features — I craft digital experiences that deliver the future.
                     </p>
                 </section>
                 <div className="seperator gradient absolute bottom-1/2 left-0 right-0"></div>
             </div>
 
-            <div className="w-lvw h-full min-h-max flex justify-center items-center p-10">
-                <section className="grid grid-cols-2 md:grid-cols-6 gap-20">
-                    {[...STATS, ...STATS]?.map((stat, index) => (
-                        <article
-                            key={index}
-                            className="w-full md:w-36  space-y-1.5 border-l-2 pl-5 border-white/20"
-                        >
-                            <p className="text-white text-2xl font-bold">
-                                {stat.title}
-                            </p>
-                            <p className="text-white text-md">
-                                {stat.description}
-                            </p>
-                        </article>
-                    ))}
-                </section>
-            </div>
-
-            {/* Features */}
-            <div className="flex md:hidden justify-between items-start flex-col md:flex-row overflow-hidden p-5  bg-black">
-                <section className="grid grid-cols-2 gap-x-10 md:gap-x-40">
-                    {POINTS?.map((feature) => (
-                        <article
-                            key={feature.title}
-                            className="first:col-span-2 nth-[1]:w-full first:w-full first:h-32 h-40 rounded-lg aspect-square space-y-1.5"
-                        >
-                            <h2 className="text-white text-xl font-bold">
-                                {feature.title}
-                            </h2>
-                            <p className="text-white text-xs">
-                                From development to deployment, we ensure
-                                efficiency, scalability, and excellence in every
-                                project
-                            </p>
-                        </article>
-                    ))}
-                </section>
-            </div>
-
-            {/* AW */}
+            {/* Tech Stack */}
             <div className="p-5 md:p-10 md:space-y-12 bg-[url('/images/cover/bg-cover.png')] bg-black/50 bg-contain bg-center">
                 <section className="space-y-5">
                     <h2 className="text-4xl md:text-5xl font-bold">
-                        Our values : Adopt composable architecture <br /> for a
-                        future-proof, adaptable system.
+                        Adopt a composable approach to ensure <br />  modular, scalable, and built to evolve.
                     </h2>
                     <p className="text-lg md:w-1/2 leading-6 pb-5">
-                        Embrace composable architecture at your own pace,
-                        unlocking modular and efficient solutions.
+                        Adopt composable architecture on your own terms — empowering you to unlock modular, efficient, and scalable solutions step by step.
                     </p>
                 </section>
 
-                <div className="flex justify-between items-start flex-col md:flex-row overflow-hidden md:p-5 pr-0 bg-black">
-                    {/* Features */}
-                    <section className="w-full grid md:grid-cols-4 gap-5 md:gap-x-40">
-                        {FEATURES?.map((feature, index) => (
-                            <article
-                                key={feature.title}
-                                className="md:h-40 rounded-lg md:aspect-square space-y-1.5"
-                            >
-                                <Image
-                                    src={`/icons/icon-${index + 1}.svg`}
-                                    alt="Localoka"
-                                    width={100}
-                                    height={100}
-                                    className="size-8"
-                                />
-                                <p className="text-white text-xl font-bold">
-                                    {feature.title}
-                                </p>
-                                <p className="text-white text-xs line-clamp-3">
-                                    {feature.description}
-                                </p>
-                            </article>
-                        ))}
-                    </section>
-                </div>
-                <h2 className="text-4xl md:text-3xl font-bold">Technology</h2>
                 {/* Stack List */}
-                <section className="relative w-full h-full py-10 md:py-0 grid grid-cols-12 overflow-x-scroll hide-scrollbar gap-x-24 gap-y-8">
+                <section className="relative w-full h-full py-10 md:py-5 grid grid-cols-12 overflow-x-scroll hide-scrollbar gap-x-24 gap-y-8">
                     <div className="opacity-gradient absolute left-0 top-0 w-full h-full" />
                     {STACK_LIST.map((tech, index) => (
                         <div
@@ -334,17 +185,15 @@ export default function AboutPage() {
             <div className="p-5 md:p-10 space-y-12 bg-">
                 <section className="space-y-2.5">
                     <h2 className="text-4xl md:text-5xl font-medium text-white">
-                        Our team
+                        Gallery
                     </h2>
                     <p className="text-white text-lg w-full md:w-1/2">
-                        We’re a dynamic group of individuals who are passionate
-                        about what we do and dedicated to delivering the best
-                        results for our clients.
+                        Highlights from my journey in building user-focused digital products.
                     </p>
                 </section>
 
-                <section className="grid grid-cols-1 md:grid-cols-[3fr_1fr_1fr_1fr] gap-5">
-                    {TEAMS?.map((team, index) => (
+                <section className="grid grid-cols-1 md:grid-cols-[3fr_auto_auto] gap-5">
+                    {Gallery?.map((team, index) => (
                         <article
                             key={index}
                             className="relative group bg-slate-200 shadow-xl cursor-pointer first:w-full first:hover:w-full md:w-60 h-80 md:hover:w-90 transition-all duration-500 transform-gpu delay-75 rounded-lg bg-[url('/images/cover/bg-gradient-1.png')] bg-cover bg-center  overflow-hidden"
@@ -356,7 +205,7 @@ export default function AboutPage() {
                                 height={100}
                                 className="size-full z-10 object-cover grayscale opacity-60 group-hover:grayscale-0 transition-all duration-500 transform-gpu delay-75"
                             />
-                            <section className="absolute bottom-0 left-0 h-20 p-5 w-full bg-gradient-to-b from-transparent via-black/50 to-black hover:to-black">
+                            <section className="absolute bottom-0 left-0 h-20 p-5 pb-20 w-full bg-gradient-to-b from-transparent via-black/50 to-black hover:to-black">
                                 <p className="text-white text-xl font-bold">
                                     {team.name}
                                 </p>
@@ -376,13 +225,12 @@ export default function AboutPage() {
             <div className="p-5 md:p-10 space-y-12">
                 <section className="space-y-5 text-left">
                     <h2 className="text-4xl md:text-5xl">
-                        Partners rate us{" "}
-                        <span className="font-bold">4.8/5</span> <br /> for
-                        custom software development
+                        What I’ve Built & Where I’ve Been
+                        <br />
+                        <span className="font-bold">Real-World</span> Experience
                     </h2>
                     <p className="text-white text-sm text-left w-full">
-                        Based on impartial reviews verified by Clutch. Most
-                        partners stay over 3 years.
+                        My Journey as a Software Engineer
                     </p>
                 </section>
 

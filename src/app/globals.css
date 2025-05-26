@@ -811,6 +811,17 @@ section {
     rgb(10 10 11) 50%
   );
 }
+.cta-gradient-b {
+  background: rgb(10 10 11);
+  background: radial-gradient(
+    circle at 50% 50%,
+    rgb(0, 0, 0) 0%,
+    rgb(3, 23, 9) 10%,
+    rgb(5, 56, 26) 20%,
+    rgb(8, 19, 8) 30%,
+    rgb(10 10 11) 90%
+  );
+}
 
 .cta-gradient-l {
   background: rgb(18, 43, 113);
@@ -825,7 +836,7 @@ section {
 }
 
 .cta-gradient-r {
-  background: rgb(18, 43, 113);
+  background: #030a16;
   background: radial-gradient(
     circle,
     rgb(0, 0, 0) 0%,

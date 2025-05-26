@@ -1,3 +1,5 @@
+import GoldText from "@/components/Effects/GoldText";
+import SweetStuffText from "@/components/Effects/SweetStuffText";
 import { PROJECT_LIST } from "@/utils/data";
 import Image from "next/image";
 import Link from "next/link";
@@ -24,18 +26,15 @@ export default function WorksPage() {
     return (
         <main className="bg-[#030A17] text-white h-full w-lvw overflow-hidden">
             {/* Hero Section */}
-            <div className="cta-gradient-l py-20 space-y-5 overflow-hidden">
+            <div className="cta-gradient-b space-y-5 overflow-hidden py-20 md:p-5">
                 <section className="flex flex-col-reverse md:flex-row justify-between md:space-x-20  items-center p-5 md:p-24">
                     <section className="space-y-3 w-full">
-                        <h1 className="text-6xl md:text-7xl font-bold mt-20 md:mt-0">
-                            Portfolio
-                        </h1>
-                        <p className="text-lg leading-6 pb-5">
-                            Signifies fast, reliable, and high-quality software
-                            delivery with precision and efficiency. 🚀
-                        </p>
+                        <SweetStuffText />
                     </section>
                 </section>
+            </div>
+
+            <div>
             </div>
 
             {/* Features */}
@@ -61,9 +60,6 @@ export default function WorksPage() {
 
             {/* PROJECTS */}
             <div id="projects" className="w-full h-full my-10 px-5 md:px-10">
-                <h2 className="text-4xl uppercase my-20">
-                    Project<span className="font-semibold text-[#CCF96D] italic">Showcase</span>
-                </h2>
                 <section className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5 md:gap-10 md:gap-y-16 w-full p-0">
                     {PROJECT_LIST?.map((project) => (
                         <article
@@ -77,7 +73,7 @@ export default function WorksPage() {
                                         alt="Localoka"
                                         width={220}
                                         height={30}
-                                        className="grayscale w-full opacity-50 group-hover:opacity-95 group-hover:-translate-y-1/4 group-hover:border-2 rounded-md group-hover:w-96 object-contain bg-white shadow-2xl group-hover:grayscale-0 transition-all duration-500"
+                                        className="grayscale min-w-96 opacity-50 group-hover:opacity-95 group-hover:-translate-y-1/4 group-hover:border-2 rounded-md object-contain bg-white shadow-2xl group-hover:grayscale-0 transition-all duration-500"
                                     />
                                     <section className="absolute bottom-0 left-0 h-32 space-x-1.5 p-5 w-full bg-gradient-to-b from-transparent to-transparent group-hover:to-black">
                                         <h3 className="font-bold">
