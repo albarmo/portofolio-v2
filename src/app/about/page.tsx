@@ -136,18 +136,18 @@ export default function AboutPage() {
                         Front-end specialist with 4+ years of experience delivering responsive, high-performance apps.
                     </p>
                 </section>
-                <section className="p-10 space-x-10 z-40 flex justify-start items-start md:px-32 space-y-5 md:space-y-0 text-balance">
+                <section className="p- space-x-10 z-40 flex justify-start items-start md:px-32 space-y-5 md:space-y-0 text-balance">
                     <p>
-                        I’m a software engineer with a deep passion for front-end development, design systems, and crafting user-centric digital experiences. With over three years of hands-on experience, I specialize in building fast, responsive, and scalable web applications that bridge the gap between beautiful design and clean, maintainable code.
+                        Im a software engineer with a deep passion for front-end development, design systems, and crafting user-centric digital experiences. With over three years of hands-on experience, I specialize in building fast, responsive, and scalable web applications that bridge the gap between beautiful design and clean, maintainable code.
                         <br />
                         <br />
-                        I believe great software is more than just functionality — it’s about clarity, performance, and empathy. That’s why I bring a design-first mindset into my engineering work, focusing on delivering seamless user interfaces and robust architectures that scale.
+                        I believe great software is more than just functionality — its about clarity, performance, and empathy. Thats why I bring a design-first mindset into my engineering work, focusing on delivering seamless user interfaces and robust architectures that scale.
                     </p>
                     <p>
-                        Currently, I’m building Laksana, powerful event management platform built specifically for outdoor activities and adventure competitions such as climbing, orienteering, trail runs, and community events. It empowers organizing teams to run seamless, efficient, and well-documented events — from preparation to wrap-up.
+                        Currently, Im building Laksana, powerful event management platform built specifically for outdoor activities and adventure competitions such as climbing, orienteering, trail runs, and community events. It empowers organizing teams to run seamless, efficient, and well-documented events — from preparation to wrap-up.
                         <br />
                         <br />
-                        I don't just ship features — I craft digital experiences that deliver the future.
+                        I dont just ship features — I craft digital experiences that deliver the future.
                     </p>
                 </section>
                 <div className="seperator gradient absolute bottom-1/2 left-0 right-0"></div>
@@ -225,7 +225,7 @@ export default function AboutPage() {
             <div className="p-5 md:p-10 space-y-12">
                 <section className="space-y-5 text-left">
                     <h2 className="text-4xl md:text-5xl">
-                        What I’ve Built & Where I’ve Been
+                        What Ive Built & Where Ive Been
                         <br />
                         <span className="font-bold">Real-World</span> Experience
                     </h2>
