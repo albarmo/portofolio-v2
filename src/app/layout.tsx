@@ -1,9 +1,11 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Space_Mono, Saira } from "next/font/google";
 import "./globals.css";
 
 import Navbar from "@/components/Layouts/navigation/Navbar";
 import Footer from "@/components/Layouts/navigation/Footer";
+import Head from "next/head";
+import GSAPSmootherProvider from "@/registry/GSAPSmoother";
 
 const saira = Saira({
     subsets: ["latin"],
@@ -16,9 +18,16 @@ const spaceMono = Space_Mono({
 });
 
 export const metadata: Metadata = {
-    title: "Albarms",
-    description: "Albar Moerhamsa Portofolio V2",
+    title: "ALBARMS | Homepage",
+    description: "Albar Moerhamsa Portfolio V2",
 };
+
+export const viewport: Viewport = {
+    width: 'device-width',
+    initialScale: 1,
+    maximumScale: 1,
+    userScalable: false,
+}
 
 export default function RootLayout({
     children,
@@ -30,10 +39,14 @@ export default function RootLayout({
             <body
                 className={`${saira.variable} ${spaceMono.variable} overflow-x-hidden`}
             >
-                <link rel="icon" href="/albarms-favicon.png" sizes="any" />
+                <Head>
+                    <link rel="icon" href="/favicon.png" sizes="any" />
+                </Head>
                 <Navbar />
-                {children}
-                <Footer />
+                <GSAPSmootherProvider>
+                    {children}
+                    <Footer />
+                </GSAPSmootherProvider>
             </body>
         </html>
     );

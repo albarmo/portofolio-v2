@@ -4,9 +4,10 @@ function randomIntFromInterval(min: number, max: number) {
     return Math.floor(Math.random() * (max - min + 1) + min);
 }
 
-const CyberPunkText: React.FC<{ text: string; duration: number }> = ({
+const CyberPunkText: React.FC<{ text: string; duration: number, classname?: string }> = ({
     text,
     duration,
+    classname
 }) => {
     const [result, setResult] = useState<string>("");
     const ALPABETH = "ABCDEFGHIJKLMNOPQRSTUVWZYZ!@$^#*$)";
@@ -51,7 +52,7 @@ const CyberPunkText: React.FC<{ text: string; duration: number }> = ({
         <div>
             <h1
                 id="cyberpunk-text"
-                className="spaceMono w-max font-bold text-xl md:text-2xl uppercase"
+                className={"spaceMono w-max font-bold text-lg uppercase cursor-cell " + classname}
                 onMouseEnter={() => generateRandomText(text)}
                 onMouseLeave={() => setResult(text)}
             >

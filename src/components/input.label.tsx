@@ -1,0 +1,60 @@
+/* eslint-disable no-unused-vars */
+import React from "react";
+
+interface InputProps {
+    state?: string;
+    label?: string;
+    required?: boolean;
+    subLabel?: string;
+    errorMessage?: string;
+    column?: boolean;
+    children?: React.ReactNode;
+    rightSlot?: React.ReactNode;
+}
+
+const InputLabel: React.FC<InputProps> = ({
+    state = "init",
+    label = "",
+    required = false,
+    subLabel = "",
+    errorMessage = "",
+    column = true,
+    children,
+    rightSlot,
+}) => {
+    return (
+        <div className={`flex ${column ? "flex-col" : "items-center"}`}>
+            {label && (
+                <div className={`${column ? "mb-1" : "mr-10"}`}>
+                    <div className="flex items-center justify-between">
+                        <div>
+                            <div className=" text-white text-lg font-semibold">
+                                {label}{" "}
+                                {required && (
+                                    <span className="text-red-500">*</span>
+                                )}
+                            </div>
+                            {subLabel && (
+                                <div className="text-xs text-black04 text-opacity-50">
+                                    {subLabel}
+                                </div>
+                            )}
+                        </div>
+                        {rightSlot && <div>{rightSlot}</div>}
+                    </div>
+                </div>
+            )}
+
+            {children}
+            {/* <Transition name="fade-out">
+          {errorMessage && (
+            <div className="mt-5">
+              <AdminsInputsError message={errorMessage} label={label} />
+            </div>
+          )}
+        </Transition> */}
+        </div>
+    );
+};
+
+export default InputLabel;

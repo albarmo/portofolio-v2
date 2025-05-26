@@ -35,30 +35,43 @@ const Navbar = () => {
     return (
         <header
             id="navbar-bottom"
-            className="fixed w-full h-16 flex justify-between items-center z-[101] bg-[#0A0A0B]"
+            className="fixed w-full h-16 flex justify-between items-center z-[101] bg-[#0A0A0B]/90 bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-50"
         >
             <Drawer
                 isOpen={isOpen}
                 close={close}
                 setCurrentSection={setCurrentSection}
             />
-            <Image src='/images/albarm-workspace-logo.svg' alt="Albarms Workspace" className="cursor-pointer object-contain mx-5" width={140} height={100} onClick={() => router.push("/")} />
+            <Link href='/' className="flex justify-start items-center h-10 px-3.5">
+                <Image src='/images/logo.gif' alt="Albarms Workspace" className="h-10 cursor-pointer object-contain" width={50} height={50} onClick={() => router.push("/")} />
+                <section className="flex flex-col items-start justify-center leading-3 text-left h-10 m-0 p-0 -mt-1.5 ml-1">
+                    <CyberPunkText text="Albarms" duration={50} classname="italic font-semibold text-[#D9D9D9] text-xl" />
+                    <p className="uppercase italic -ml-0.5 text-[#CCF96D] ">Workspace</p>
+                </section>
+            </Link>
             <nav
                 id="navbar-action"
                 className="flex items-center justify-center h-full"
             >
                 <ul className="hidden md:flex items-center justify-center space-x-10 px-10 h-full">
-                    <Link href={"https://github.com/albarmo"} target="_blank" className="hover:text-[#CCF96D]">
-                        Github
-                    </Link>
+
                     <Link
-                        href={
-                            "https://www.linkedin.com/in/albar-moerhamsa-aa21681bb"
-                        }
-                        target="_blank"
+                        href={"/portfolio"}
                         className="hover:text-[#CCF96D]"
                     >
-                        LinkedIn
+                        Portfolio
+                    </Link>
+                    <Link
+                        href={"/about"}
+                        className="hover:text-[#CCF96D]"
+                    >
+                        About
+                    </Link>
+                    <Link
+                        href={"/contact"}
+                        className="hover:text-[#CCF96D]"
+                    >
+                        Contact
                     </Link>
                     <Link
                         href={"/resume/Albar_Moerhamsa.pdf"}
