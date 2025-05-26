@@ -10,6 +10,7 @@ import { COMPONENT_LIST } from "@/utils/hwtd";
 import Lanyard from "@/components/Model/Lanyard";
 import ButtonGradient from "@/components/Effects/ButtonGradient";
 import PerspectiveText from "@/components/Effects/PerspectiveText";
+import BoringText from "@/components/Effects/BoringText";
 
 const STATS = [
     {
@@ -52,12 +53,16 @@ export default function Home() {
                         <Image src={'/images/id.png'} alt="IDN" width={16} height={16} className="object-contain" />
                         <p className="">JKT/IDN</p>
                     </section>
-                    <h1 className="text-5xl leading-[60px] md:text-[90px] font-black uppercase md:leading-[85px] text-center">Interactive. Intuitive.<br /><span className="text-[#0A0A0B] text-outline">Impactful.</span></h1>
+                    <BoringText />
                     <p className="w-full md:w-1/3 text-center">
                         I believe great software is more than just functionality — it’s about clarity, performance, and empathy.
                         That’s why I bring a design-first mindset into my engineering work, focusing on delivering seamless user interfaces and robust architectures that scale.
                     </p>
                 </div>
+            </div>
+
+            <div className="w-full p-5 md:p-24 md:space-y-10 bg-black/50 bg-contain bg-center">
+                <BoringText />
             </div>
 
             {/* TECH STACK */}
