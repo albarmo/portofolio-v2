@@ -27,6 +27,41 @@ const STATS = [
     },
 ];
 
+const WORKING_EXPERIENCE = [
+    {
+        id: 'entrust-digital',
+        name: "Entrust Digital",
+        period: '2023 - 2025',
+        role: "Frontend Engineer",
+        logo: "/images/entrust-digital.png",
+        description: "As a Frontend Developer at Entrust Digital, I was assigned to Bank Rakyat Indonesia (BRI), where I contributed to multiple high-impact digital initiatives. I worked on Delima, a platform providing loan services for micro and macro business owners, and Localoka, BRI’s e-commerce and marketplace platform. My responsibilities included developing and maintaining scalable client-side applications, designing clean and resilient frontend architectures, and integrating RESTful APIs to ensure seamless data flow across the system. I also implemented web security best practices and focused on optimizing application performance and development processes to deliver a robust and efficient user experience. My work played a key role in supporting BRI’s mission to enhance digital services for a wide range of customers."
+    },
+    {
+        id: 'feedloop',
+        name: "Feedloop.io",
+        period: '2021 - 2023',
+        role: "Software Engineer",
+        logo: "/images/feedloop.png",
+        description: "As a Software Engineer at Feedloop, I collaborated with a talented team to develop Qorebase, a Low Code Development Platform (LCDP) that empowers users to build digital solutions with minimal coding effort. Qorebase is composed of three main components: Qore App, an intuitive app builder that outputs PWA (Progressive Web App) web applications; Qore Data, a service layer that generates scalable RESTful APIs and Qore Pipeline, a stream processing and scheduling engine for automated workflows. I contributed to the development of these modules, focusing on building scalable, maintainable, and user-friendly features that streamline the application development process."
+    },
+    {
+        id: 'everidea-interactive',
+        name: "Everidea Interactive",
+        period: '2021',
+        role: "Frontend Engineer",
+        logo: "/images/everidea.png",
+        description: "At Everidea Interactive, I served as a Frontend Developer, contributing to the development of content-rich web platforms such as Semangatbaik, a local news outlet, and Kulturlokal, a cultural media site highlighting Indonesian heritage. My responsibilities included building and maintaining responsive, high-performance front-end applications, structuring scalable and maintainable UI architecture, and integrating RESTful APIs to ensure timely and relevant content delivery. I also emphasized web security best practices and performance enhancements, providing users with a fast, reliable, and secure browsing experience across various devices. These efforts played a key role in advancing Everidea’s vision of delivering trustworthy information and celebrating Indonesian culture through digital innovation."
+    },
+    {
+        id: '1000-startup',
+        name: "Gerakan Nasional 1000 Startup Digital",
+        period: '2021',
+        role: "Frontend Engineer",
+        logo: "/images/1000-startup.png",
+        description: "As a Frontend Developer at Entrust Digital, I was assigned to the 1000 Startup Digital program by Kominfo, where I collaborated with a Bali-based startup called Teskarir. Teskarir focuses on developing a web-based application that provides career recommendation tests to help users discover suitable career paths. In this role, I was responsible for developing and maintaining the client-side application, ensuring a smooth and engaging user experience. My work included building a clean and scalable frontend architecture, integrating RESTful APIs, and implementing best practices in web security and performance optimization. Through this project, I contributed to empowering individuals in their career journey with accessible and data-driven insights."
+    },
+]
+
 export default function Home() {
     const router = useRouter();
     return (
@@ -111,7 +146,7 @@ export default function Home() {
                                     alt="Localoka"
                                     width={220}
                                     height={30}
-                                    className="grayscale w-full opacity-50 group-hover:opacity-95 group-hover:-translate-y-1/4 group-hover:border-2 rounded-md group-hover:w-96 object-contain bg-white shadow-2xl group-hover:grayscale-0 transition-all duration-500"
+                                    className="grayscale w-full opacity-50 group-hover:opacity-95 group-hover:-translate-y-1/4 group-hover:scale-110 rounded-md group-hover:w-96 object-contain shadow-2xl group-hover:grayscale-0 transition-all duration-500"
                                 />
                                 <section className="absolute bottom-0 left-0 h-32 space-x-1.5 p-5 w-full bg-gradient-to-b from-transparent to-transparent group-hover:to-black">
                                     <h3 className="font-bold">
@@ -153,7 +188,7 @@ export default function Home() {
                                 cy="49"
                                 r="48.5"
                                 stroke="#CCF96D"
-                                stroke-dasharray="2 2"
+                                strokeDasharray="2 2"
                             />
                         </svg>
                     </section>
@@ -177,7 +212,7 @@ export default function Home() {
             </div>
 
             {/* THE WORK EXPERIENCE */}
-            <div className="h-[1550px] relative w-full flex justify-between overflow-hidden my-10">
+            <div className="h-max relative w-full flex justify-between overflow-hidden my-10">
                 <div className="w-full h-lvh -z-5">
                     <Lanyard />
                 </div>
@@ -186,22 +221,26 @@ export default function Home() {
                         Working <span className="font-bold">Experience</span>
                     </h1>
                     <p>
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae dolores non et dicta sint inventore hic quo? Incidunt, animi eum. Quam at repellendus laudantium! Aliquid nulla eius facere quae error.
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis quasi officiis consequatur ducimus. Laboriosam, placeat animi, commodi quos sint, ut voluptates nesciunt recusandae nobis dolorem modi cumque? Porro, sint dicta?Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vitae voluptatem, harum nostrum vel perspiciatis esse incidunt omnis amet, accusamus corporis dolorum fuga excepturi rem aliquam, id soluta maiores recusandae quas!Lorem
+                        I am a Frontend Developer and Software Engineer with hands-on experience in building scalable web applications, developing clean and resilient frontend architectures, and contributing to impactful digital products across various industries — including finance, e-commerce, media, and career development.
                     </p>
-                    <div className="space-y-10 snap-y snap-proximity flex-nowrap overflow-x-scroll w-full">
-                        {[1, 2, 3, 4].map((_item, index: number) =>
-                            <section key={index} className="snap-start flex justify-between items-start space-x-10">
-                                <p className="text-[#9B9B9B] w-1/3">2021 --- 2023</p>
-                                <div className="h-min p-0 space-y-5">
-                                    <section className="flex justify-normal items-center space-x-5 p-0 ">
-                                        <Image src={'/images/feedloop.png'} alt="" width={50} height={50} />
+                    <div className="h-screen md:h-max space-y-10 snap-y snap-proximity flex-nowrap overflow-y-scroll w-full">
+                        {WORKING_EXPERIENCE.map((experience, index: number) =>
+                            <section key={index} className="snap-start flex flex-col md:flex-row justify-between items-start md:space-x-10 p-0">
+                                <p className="text-[#9B9B9B] hidden md:block">{experience.period}</p>
+                                <div className="h-max p-0 space-y-5">
+                                    <section className="flex justify-normal items-center space-x-5 p-0">
+                                        <Image
+                                            src={experience?.logo}
+                                            alt={experience?.name}
+                                            width={100}
+                                            height={100}
+                                        />
                                         <section className="p-0">
-                                            <h1 className="font-bold">Feedloop</h1>
+                                            <h1 className="font-bold">{experience?.name}</h1>
                                             <p>Software Engineer</p>
                                         </section>
                                     </section>
-                                    <p>Build and maintain critical components used to construct Klaviyo’s frontend, across the whole product. Work closely with cross-functional teams, including developers, designers, and product managers, to implement and advocate for best practices in web accessibility.</p>
+                                    <p>{experience.description}</p>
                                 </div>
                             </section>
                         )}
@@ -232,7 +271,7 @@ export default function Home() {
                                 cy="49"
                                 r="48.5"
                                 stroke="#CCF96D"
-                                stroke-dasharray="2 2"
+                                strokeDasharray="2 2"
                             />
                         </svg>
                     </section>

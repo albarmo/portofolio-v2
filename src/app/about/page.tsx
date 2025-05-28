@@ -3,21 +3,21 @@ import StackIcon from "tech-stack-icons";
 
 const Gallery = [
     {
+        name: "APOA",
+        title: "Dirjen Imigrasi",
+        image_url: "/images/project/apoa.png",
+        location: "Jakarta, Indonesia",
+    },
+    {
         name: "Localoka",
         title: "Bank Rakyat Indonesia  x Pari",
-        image_url: "https://cdn.linkumkm.id/uploads/library/6/5/3/4/6/65346_840x576.jpeg",
+        image_url: "/images/project/localoka.png",
         location: "Jakarta, Indonesia",
     },
     {
         name: "Delima",
         title: "Bank Rakyat Indonesia",
-        image_url: "https://stitmadani.ac.id/wp-content/uploads/2023/11/4.jpg",
-        location: "Jakarta, Indonesia",
-    },
-    {
-        name: "Laksana",
-        title: "Tricora",
-        image_url: "/images/people-3.png",
+        image_url: "/images/project/delima.png",
         location: "Jakarta, Indonesia",
     },
 ];
@@ -192,7 +192,7 @@ export default function AboutPage() {
                     </p>
                 </section>
 
-                <section className="grid grid-cols-1 md:grid-cols-[3fr_auto_auto] gap-5">
+                <section className="grid grid-cols-1 md:grid-cols-[3fr_auto_auto_auto] gap-5">
                     {Gallery?.map((team, index) => (
                         <article
                             key={index}
