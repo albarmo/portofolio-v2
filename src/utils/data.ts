@@ -169,3 +169,59 @@ export const SOCIAL_MEDIA_LIST = [
     iconPath: "/assets/social/instagram.svg",
   },
 ];
+
+export const GALLERY_LIST = [
+  {
+    name: "APOA",
+    title: "Dirjen Imigrasi",
+    image_url: "/images/project/apoa.png",
+    location: "Jakarta, Indonesia",
+  },
+  {
+    name: "Localoka",
+    title: "Bank Rakyat Indonesia x Pari",
+    image_url: "/images/project/localoka.png",
+    location: "Jakarta, Indonesia",
+  },
+  {
+    name: "Delima",
+    title: "Bank Rakyat Indonesia",
+    image_url: "/images/project/delima.png",
+    location: "Jakarta, Indonesia",
+  },
+  {
+    name: "Kulturlokal",
+    title: "Everidea Interactive",
+    image_url: "/images/project/kulturlokal-cover.png",
+    location: "Jakarta, Indonesia",
+  },
+];
+
+export const CLIENTS = [
+  {
+    name: "BRI",
+    industry: "Digital Banking",
+    location: "Jakarta, IDN",
+    services: ["Web Development", "Mobile App Development", "UI/UX Design"],
+    image_url: "/images/company/bri.png",
+  },
+  {
+    name: "Feedloop",
+    industry: "Low Code Platform",
+    location: "Jakarta, IDN",
+    services: ["Custom Software", "IoT Solutions", "Cloud Integration"],
+    image_url: "/images/company/feedloop.jpg",
+  },
+  {
+    name: "Everidea",
+    industry: "Digital Agency",
+    location: "Jakarta, IDN",
+    image_url: "/images/company/everidea.webp",
+  },
+  {
+    name: "1000 Startup",
+    industry: "Government Program",
+    location: "Jakarta, IDN",
+    image_url: "/images/company/1000-startup.png",
+  },
+];

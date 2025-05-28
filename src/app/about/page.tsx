@@ -1,125 +1,7 @@
+import { CLIENTS, GALLERY_LIST, STACK_LIST } from "@/utils/data";
 import Image from "next/image";
 import StackIcon from "tech-stack-icons";
 
-const Gallery = [
-    {
-        name: "APOA",
-        title: "Dirjen Imigrasi",
-        image_url: "/images/project/apoa.png",
-        location: "Jakarta, Indonesia",
-    },
-    {
-        name: "Localoka",
-        title: "Bank Rakyat Indonesia  x Pari",
-        image_url: "/images/project/localoka.png",
-        location: "Jakarta, Indonesia",
-    },
-    {
-        name: "Delima",
-        title: "Bank Rakyat Indonesia",
-        image_url: "/images/project/delima.png",
-        location: "Jakarta, Indonesia",
-    },
-];
-
-const STACK_LIST = [
-    "typescript",
-    "js",
-    "nodejs",
-    "nestjs",
-    "postgresql",
-    "go",
-    "Redis",
-    "mysql",
-    "mongodb",
-    "reactjs",
-    "nextjs2",
-    "vuejs",
-    "tailwindcss",
-    "storybook",
-    "html5",
-    "css3",
-    "Git",
-    "bunjs",
-    "vitejs",
-    "zod",
-    "jira",
-    "astro",
-    "docusaurus",
-    "figma",
-    "postman",
-    "eslint",
-    "sass",
-    "jest",
-    "npm",
-    "rollup",
-    "babel",
-    "aws",
-    "ec2",
-    "docker",
-    "ionic",
-];
-
-const CLIENTS = [
-    {
-        name: "TechNova Solutions",
-        industry: "Software Development",
-        location: "New York, USA",
-        services: ["Web Development", "Mobile App Development", "UI/UX Design"],
-        image_url: "https://example.com/images/technova_logo.png",
-    },
-    {
-        name: "EcoEnergy Innovations",
-        industry: "Renewable Energy",
-        location: "Berlin, Germany",
-        services: ["Custom Software", "IoT Solutions", "Cloud Integration"],
-        image_url: "https://example.com/images/ecoenergy_logo.png",
-    },
-    {
-        name: "RetailX Systems",
-        industry: "E-commerce",
-        location: "London, UK",
-        services: [
-            "E-commerce Platform Development",
-            "Payment Gateway Integration",
-            "Data Analytics",
-        ],
-        image_url: "https://example.com/images/retailx_logo.png",
-    },
-    {
-        name: "HealthTech Partners",
-        industry: "Healthcare",
-        location: "San Francisco, USA",
-        services: [
-            "Telemedicine App",
-            "Data Security Solutions",
-            "Healthcare Analytics",
-        ],
-        image_url: "https://example.com/images/healthtech_logo.png",
-    },
-    {
-        name: "FinSecure Inc.",
-        industry: "Finance",
-        location: "Toronto, Canada",
-        services: [
-            "Blockchain Development",
-            "Fintech Solutions",
-            "Security Systems",
-        ],
-        image_url: "https://example.com/images/finsecure_logo.png",
-    },
-    {
-        name: "AutoSmart Technologies",
-        industry: "Automotive",
-        location: "Tokyo, Japan",
-        services: [
-            "Autonomous Systems",
-            "AI Solutions",
-            "Software Integration",
-        ],
-        image_url: "https://example.com/images/autosmart_logo.png",
-    },
-];
 
 export default function AboutPage() {
     return (
@@ -182,7 +64,7 @@ export default function AboutPage() {
             </div>
 
             {/* Teams */}
-            <div className="p-5 md:p-10 space-y-12 bg-">
+            <div className="p-5 md:p-10 space-y-12">
                 <section className="space-y-2.5">
                     <h2 className="text-4xl md:text-5xl font-medium text-white">
                         Gallery
@@ -192,29 +74,31 @@ export default function AboutPage() {
                     </p>
                 </section>
 
-                <section className="grid grid-cols-1 md:grid-cols-[3fr_auto_auto_auto] gap-5">
-                    {Gallery?.map((team, index) => (
+                <section className="grid grid-cols-1 md:grid-cols-[3fr_1fr_1fr_1fr] gap-5">
+                    {GALLERY_LIST?.map((gallery, index) => (
                         <article
                             key={index}
-                            className="relative group bg-slate-200 shadow-xl cursor-pointer first:w-full first:hover:w-full md:w-60 h-80 md:hover:w-90 transition-all duration-500 transform-gpu delay-75 rounded-lg bg-[url('/images/cover/bg-gradient-1.png')] bg-cover bg-center  overflow-hidden"
+                            className="group bg-slate-200 shadow-xl cursor-pointer first:w-full first:hover:w-full md:w-60 h-80 md:hover:w-90 transition-all duration-500 transform-gpu delay-75 rounded-lg bg-[url('/images/cover/bg-green-2.png')] bg-cover bg-center  overflow-hidden"
                         >
                             <Image
-                                src={team.image_url}
-                                alt={team.name}
+                                src={gallery.image_url}
+                                alt={gallery.name}
                                 width={500}
                                 height={100}
-                                className="size-full z-10 object-cover grayscale opacity-60 group-hover:grayscale-0 transition-all duration-500 transform-gpu delay-75"
+                                className="size-full z-10 object-cover opacity-60 grayscale group-hover:grayscale-0 transition-all duration-500 transform-gpu delay-75"
                             />
-                            <section className="absolute bottom-0 left-0 h-20 p-5 pb-20 w-full bg-gradient-to-b from-transparent via-black/50 to-black hover:to-black">
-                                <p className="text-white text-xl font-bold">
-                                    {team.name}
-                                </p>
-                                <p className="text-white text-xs">
-                                    <span className="font-bold">
-                                        {team.title}
-                                    </span>
-                                    . {team.location}
-                                </p>
+                            <section className="relative h-full bg-gradient-to-b from-transparent to-black hover:to-black flex justify-center items-start p-5">
+                                <section className="absolute bottom-0 left-0 h-34 p-5 w-full bg-gradient-to-b from-transparent to-transparent hover:to-black">
+                                    <p className="text-white text-4xl font-bold">
+                                        0{index + 1}
+                                    </p>
+                                    <p className="text-white text-xs">
+                                        <span className="font-bold">
+                                            {gallery.title}
+                                        </span>
+                                        . {gallery.location}
+                                    </p>
+                                </section>
                             </section>
                         </article>
                     ))}
@@ -239,16 +123,14 @@ export default function AboutPage() {
                         ...CLIENTS,
                         ...CLIENTS,
                         ...CLIENTS,
-                        ...CLIENTS,
-                        ...CLIENTS,
                     ].map((client, index) => (
                         <Image
                             key={index}
-                            src="https://bigbuckclub.com/wp-content/uploads/2018/05/logo-dummy-4.png"
+                            src={client.image_url}
                             alt={client.name}
-                            width={250}
+                            width={150}
                             height={10}
-                            className="snap-center object-contain mr-3.5"
+                            className="snap-center object-contain mr-3.5 bg-white h-32 min-w-60"
                         />
                     ))}
                     <div className="opacity-gradient absolute left-0 top-0 w-full h-full" />

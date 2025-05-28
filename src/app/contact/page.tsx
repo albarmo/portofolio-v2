@@ -1,112 +1,83 @@
-"use client";
-import Image from "next/image";
-import React, { useState } from "react";
-import Link from "next/link";
-import InputLabel from "@/components/input.label";
-import Input from "@/components/input";
-
 export default function ContactPage() {
-    const [firstName, setFirstName] = useState("");
-    const [lastName, setLastName] = useState("");
-    const [mail, setMail] = useState("");
-
-    const INFORMATION = [
-        {
-            title: "Get in touch",
-            desc: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor architecto eaque, ea velit nihil nobis? Sit quos, nobis quia doloremque repudiandae similique illo dolores eos harum exercitationem laboriosam sequi necessitatibus!",
-            address: "Jl. H Mandor, No.12a, 005/12 South Jakarta, Indonesia",
-            phone: "085711123519",
-            mail: "devoria@gmail.com",
-        },
-    ];
     return (
-        <>
-            <div className="w-full grid grid-cols-1 lg:grid-cols-2">
-                {INFORMATION?.map((item, index) => (
-                    <section
-                        key={index}
-                        className="w-full h-screen p-28 bg-[url('/images/cover/bg-cover.png')] bg-black/50 flex flex-col py-52"
-                    >
-                        <h1 className="text-4xl font-bold">
-                            {item?.title ?? ""}{" "}
-                        </h1>
-                        <h2 className="text-base/8 w-10/12 pt-8 whitespace-pre-line ">
-                            {item?.desc ?? ""}
+        <div id="contact">
+            <div className=" px-5 py-28 sm:px-6 lg:px-10 md:py-32">
+                <div className="mb-4">
+                    <div className="mb-6 max-w-3xl text-center sm:text-center md:mx-auto md:mb-12">
+                        <p className="text-base font-semibold uppercase tracking-wide text-gray-600 dark:text-gray-200">
+                            Contact
+                        </p>
+                        <h2
+                            className="font-heading mb-4 font-bold tracking-tight text-gray-900 dark:text-white text-3xl sm:text-5xl">
+                            Get in Touch
                         </h2>
-                        <div className="pt-12 space-y-10 w-96">
-                            <div className="flex items-center space-x-3">
-                                <Image
-                                    src={"icons/building.svg"}
-                                    width={40}
-                                    height={40}
-                                    alt="get in touch icon"
-                                />
-                                <h1>{item?.address ?? ""}</h1>
-                            </div>
-                            <div className="flex items-center space-x-3">
-                                <Image
-                                    src={"icons/phone.svg"}
-                                    width={40}
-                                    height={40}
-                                    alt="get in touch icon"
-                                />
-                                <h1>{item?.phone ?? ""}</h1>
-                            </div>
-                            <div className="flex items-center space-x-3">
-                                <Image
-                                    src={"icons/email.svg"}
-                                    width={40}
-                                    height={40}
-                                    alt="get in touch icon"
-                                />
-                                <h1>{item?.mail ?? ""}</h1>
-                            </div>
-                        </div>
-                    </section>
-                ))}
-                <section className="w-full h-screen p-28 bg-[#111727] py-20 lg:py-52">
-                    <div className="grid grid-cols-1 2xl:grid-cols-2 gap-y-5 2xl:gap-y-0 gap-x-5 2xl:gap-x-5  pb-10">
-                        <div className="w-full space-y-1">
-                            <InputLabel label="First name" />
-                            <Input placeholder="Anto" onChange={setFirstName} />
-                        </div>
-                        <div className="w-full space-y-1">
-                            <InputLabel label="Last name" />
-                            <Input
-                                placeholder="Frozen"
-                                onChange={setLastName}
-                            />
-                        </div>
+                        <p className="mx-auto mt-4 max-w-3xl text-xl text-gray-600 dark:text-slate-400">
+                            Drop us a message and let’s talk.
+                        </p>
                     </div>
-                    <div className="space-y-5">
-                        <div className="w-full space-y-1">
-                            <InputLabel label="Email" />
-                            <Input
-                                placeholder="anto@gmail.com"
-                                onChange={setMail}
-                            />
-                        </div>
-                        <div className="w-full space-y-1">
-                            <InputLabel label="Phone number" />
-                            <Input placeholder="0857198972" />
-                        </div>
-                        <div className="w-full h-96 space-y-1">
-                            <InputLabel label="Message" />
-                            <textarea className="w-full h-40 flex-1 px-2 py-1 bg-[#1e2434] focus:outline-none flex-wrap focus-within:ring focus-within:border-blue-300 rounded-lg" />
-                            <div className="w-full flex justify-end mt-5">
-                                <Link
-                                    href={`mailto:${mail}?subject=${firstName}%20${lastName}&body=Body-goes-here`}
-                                    className="card-wrapper w-full h-14 md:h-11 md:w-40 rounded-lg cursor-pointer"
-                                >
-                                    <p className="card-content rounded-lg bg-gradient-to-r from-black/90 to-slate-900/80">
-                                        Send message
-                                    </p>
-                                </Link>
+                </div>
+                <div className="w-full h-full pr-6 flex flex-col md:flex-row justify-center items-start space-x-10">
+                    <p className="w-full md:w-1/3 mt-3 mb-12 text-lg text-gray-600 dark:text-slate-400">
+                        Let’s Connect.
+                        Whether you have a question, a project idea, or just want to say hello—we’re here for it.
+                        Fill out the form below or reach out directly via email. We’ll get back to you as soon as possible.
+                    </p>
+                    <ul className="mb-6 md:mb-0">
+                        <li className="flex">
+                            <div className="flex h-10 w-10 items-center justify-center rounded bg-gray-900 text-gray-50">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" className="h-6 w-6">
+                                    <path d="M9 11a3 3 0 1 0 6 0a3 3 0 0 0 -6 0"></path>
+                                    <path
+                                        d="M17.657 16.657l-4.243 4.243a2 2 0 0 1 -2.827 0l-4.244 -4.243a8 8 0 1 1 11.314 0z">
+                                    </path>
+                                </svg>
                             </div>
-                        </div>
-                    </div>
-                </section>
+                            <div className="ml-4 mb-4">
+                                <h3 className="mb-2 text-lg font-medium leading-6 text-gray-900 dark:text-white">Our Address
+                                </h3>
+                                <p className="text-gray-600 dark:text-slate-400">Jakarta Selatan, Indonesia</p>
+                            </div>
+                        </li>
+                        <li className="flex">
+                            <div className="flex h-10 w-10 items-center justify-center rounded bg-gray-900 text-gray-50">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" className="h-6 w-6">
+                                    <path
+                                        d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2">
+                                    </path>
+                                    <path d="M15 7a2 2 0 0 1 2 2"></path>
+                                    <path d="M15 3a6 6 0 0 1 6 6"></path>
+                                </svg>
+                            </div>
+                            <div className="ml-4 mb-4">
+                                <h3 className="mb-2 text-lg font-medium leading-6 text-gray-900 dark:text-white">Contact
+                                </h3>
+                                <p className="text-gray-600 dark:text-slate-400">Mobile: +62 (812) 8070-9980</p>
+                                <p className="text-gray-600 dark:text-slate-400">Mail: moerhamsa@gmail.com</p>
+                            </div>
+                        </li>
+                        <li className="flex">
+                            <div className="flex h-10 w-10 items-center justify-center rounded bg-gray-900 text-gray-50">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" className="h-6 w-6">
+                                    <path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0"></path>
+                                    <path d="M12 7v5l3 3"></path>
+                                </svg>
+                            </div>
+                            <div className="ml-4 mb-4">
+                                <h3 className="mb-2 text-lg font-medium leading-6 text-gray-900 dark:text-white">Working
+                                    hours</h3>
+                                <p className="text-gray-600 dark:text-slate-400">Monday - Friday: 08:00 - 17:00</p>
+                                <p className="text-gray-600 dark:text-slate-400">Saturday &amp; Sunday: 08:00 - 12:00</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
             </div>
-        </>
+        </div>
     );
 }
