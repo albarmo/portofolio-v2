@@ -20,20 +20,22 @@ export default function WorksPage() {
                 <section className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5 md:gap-10 md:gap-y-16 w-full p-0">
                     {PROJECT_LIST?.map((project) => (
                         <article
-                            key={project.title}
+                            key={project.id}
                             className="group shadow-xl cursor-pointer w-full h-80 transition-all duration-500 transform-gpu delay-75 rounded-lg bg-[url('/images/cover/bg-green-4.png')] bg-cover bg-center"
                         >
                             <section className="relative w-full h-full bg-gradient-to-b from-transparent to-black hover:to-black flex justify-center items-start">
-                                <Image
-                                    src={project.image}
-                                    alt="Localoka"
-                                    width={220}
-                                    height={30}
-                                    className="grayscale w-full opacity-50 group-hover:opacity-95 group-hover:-translate-y-1/4 group-hover:scale-110 rounded-md group-hover:w-96 object-contain shadow-2xl group-hover:grayscale-0 transition-all duration-500"
-                                />
+                                <Link href={`/portfolio/${project.id}`}>
+                                    <Image
+                                        src={project.thumbnail}
+                                        alt="Localoka"
+                                        width={220}
+                                        height={30}
+                                        className="grayscale w-full opacity-50 group-hover:opacity-95 group-hover:-translate-y-1/4 group-hover:scale-110 rounded-md group-hover:w-96 object-contain shadow-2xl group-hover:grayscale-0 transition-all duration-500"
+                                    />
+                                </Link>
                                 <section className="absolute bottom-0 left-0 h-32 space-x-1.5 p-5 w-full bg-gradient-to-b from-transparent to-transparent group-hover:to-black">
                                     <h3 className="font-bold">
-                                        {project.title}
+                                        {project.name}
                                     </h3>
                                     <section className="md:h-0 md:w-0 p-1 group-hover:w-full transition-all duration-500 transform-gpu delay-50">
                                         <p className="text-white text-xs line-clamp-2">

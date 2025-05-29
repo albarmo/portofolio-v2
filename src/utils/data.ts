@@ -72,68 +72,190 @@ export const STACK_LIST = [
   "ionic",
 ];
 
-export const PROJECT_LIST = [
+export type Project = {
+  id: string;
+  name: string;
+  year: string | number;
+  thumbnail: string;
+  hero: string;
+  link: string;
+  description: string;
+  brief: {
+    image?: string;
+    text: string;
+  };
+  result: {
+    image?: string;
+    text: string;
+  };
+  tech_stack: {
+    text: string;
+    stacks: { id: string; name: string; logo: string }[];
+  };
+};
+
+export const PROJECT_LIST: Project[] = [
   {
     id: "apoa",
-    title: "APOA Dirjen Imigrasi",
-    image:
-      "https://mmc.tirto.id/image/share/socmed/2025/03/27/header-imigrasi-4-_ratio-16x9.jpg",
+    name: "APOA Dirjen Imigrasi",
+    year: 2025,
+    thumbnail: "/images/project/apoa-map.png",
+    hero: "/images/project/apoa.png",
     link: "#",
     description:
       "APOA is a foreign guest reporting system developed for Indonesia’s Directorate General of Immigration, featuring passport scanning via OCR for check-in/check-out, along with user role management, guest and hotel data management, work region tracking, SSO, and data export, enabling secure and efficient immigration reporting.",
+    brief: {
+      image: "/images/project/apoa-map.png",
+      text: "Development of a foreign guest reporting system for the Indonesian Directorate General of Immigration, enabling hotel check-in/check-out via OCR-based passport scanning, with features including guest management, regional tracking, and secure data export.",
+    },
+    result: {
+      image: "/images/project/apoa.png",
+      text: "Enabled automated, secure immigration guest reporting, Improved operational efficiency for hotels and immigration offices, Successfully integrated with existing SSO and centralized data systems.",
+    },
+    tech_stack: {
+      text: "Tech stacks used for immigration system integration",
+      stacks: [],
+    },
   },
   {
     id: "localoka",
-    title: "BRI Localoka",
-    image: "/images/project/localoka-cover.png",
+    name: "BRI Localoka",
+    year: 2025,
+    thumbnail: "/images/project/localoka-cover.png",
+    hero: "/images/project/localoka-cover.png",
     link: "#",
     description:
       "Localoka is a marketplace platform designed to empower and support Mmes (Micro, Small, and Medium Enterprises) in Indonesia. It enables local businesses to promote and sell their products online, providing a user-friendly digital ecosystem for buyers and sellers. Localoka aims to accelerate the digital transformation of small enterprises by offering accessible tools for product listing, order management, and secure transactions.",
+    brief: {
+      text: "A marketplace platform to support and empower MSMEs in Indonesia by providing tools for product listing, order management, and online selling within a user-friendly digital ecosystem.",
+    },
+    result: {
+      text: "By adopting a lean product development approach and implementing a composable architecture on the front end, we focused our efforts on delivering only the most critical features needed for initial user engagement. Close collaboration between product, design, and engineering ensured tight feedback loops, fast decision-making, and smooth execution. As a result, we successfully launched the MVP ahead of schedule, giving the team additional time to gather early user feedback, validate the product direction, and refine the experience iteratively. This early delivery not only accelerated the overall roadmap but also demonstrated the strength of strategic prioritization, modular technical foundations, and an agile development mindset.",
+    },
+    tech_stack: {
+      text: "Tech stacks for marketplace web platform",
+      stacks: [],
+    },
   },
   {
     id: "delima",
-    title: "BRI Delima",
-    image: "/images/project/delima-cover.png",
+    name: "BRI Delima",
+    year: 2025,
+    thumbnail: "/images/project/delima-cover.png",
+    hero: "/images/project/delima-cover.png",
     link: "#",
     description:
-      "Delima is a digital loan platform developed to provide accessible financing solutions for micro businesses. It enables entrepreneurs to apply for and manage micro-loans easily through a user-friendly interface, supporting financial inclusion and empowering small-scale enterprises to grow and thrive in the digital economy.",
+      "Delima is a digital loan platform developed to provide accessible financing solutions for micro businesses...",
+    brief: {
+      text: "Development of a digital micro-loan platform to enhance financial inclusion by making loan applications accessible to small entrepreneurs via a seamless digital experience.",
+    },
+    result: {
+      text: "Streamlined micro-loan application process, Supported the financial growth of small businesses, Contributed to BRI’s digital transformation in the microfinance sector.",
+    },
+    tech_stack: {
+      text: "Tech stacks for microfinance application",
+      stacks: [],
+    },
   },
   {
     id: "housing",
-    title: "Housing App - Interactive Static Map",
-    image: "/images/project/ISMHousing.png",
+    name: "Housing App - Interactive Static Map",
+    year: 2024,
+    thumbnail: "/images/project/ISMHousing.png",
+    hero: "/images/project/ISMHousing.png",
     link: "#",
     description:
       "Housing App – Interactive Static Map is a user-friendly application that provides an interactive map interface for browsing and exploring housing options.",
+    brief: {
+      text: "An intuitive housing browser app with an interactive map interface for better real estate discovery and exploration.",
+    },
+    result: {
+      text: "Delivered a smoother user experience in exploring housing data, Simplified user navigation using a static yet interactive visual interface.",
+    },
+    tech_stack: {
+      text: "Tech stacks for real estate data visualization",
+      stacks: [],
+    },
   },
   {
     id: "teskarir",
-    title: "Teskarir",
-    image: "/images/project/Teskarir.png",
+    name: "Teskarir",
+    year: 2024,
+    thumbnail: "/images/project/Teskarir.png",
+    hero: "/images/project/Teskarir.png",
     link: "https://softdulur-landing-git-main-albarmo.vercel.app",
     description:
-      "Teskarir is a web-based application that lets you try career personality tests to help discover the best career paths suited to your strengths and preferences, providing personalized recommendations for your professional growth.",
+      "Teskarir is a web-based application that lets you try career personality tests...",
+    brief: {
+      text: "Web-based platform offering career personality tests to help users identify suitable career paths based on their individual preferences and strengths.",
+    },
+    result: {
+      text: "The startup success top 10 qualification, Successfully deployed with responsive and accessible design.",
+    },
+    tech_stack: {
+      text: "Tech stacks for career assessment app",
+      stacks: [],
+    },
   },
   {
     id: "plagams",
-    title: "Plagams",
-    image: "/images/project/Plagams.png",
+    name: "Plagams",
+    year: 2023,
+    thumbnail: "/images/project/Plagams.png",
+    hero: "/images/project/Plagams.png",
+    link: "#",
     description:
-      "Plagams is the official webstore for a local clothing brand, offering a curated selection of fashion products with a focus on quality and style, providing customers a seamless online shopping experience.",
+      "Plagams is the official webstore for a local clothing brand...",
+    brief: {
+      text: "Creation of an official e-commerce webstore for a local fashion brand focusing on showcasing curated, high-quality clothing collections.",
+    },
+    result: {
+      text: "Increased brand presence through a professional digital storefront.",
+    },
+    tech_stack: {
+      text: "Tech stacks for fashion e-commerce",
+      stacks: [],
+    },
   },
   {
     id: "kulturlokal",
-    title: "KulturLokal",
-    image: "/images/project/KulturLokal.png",
+    name: "KulturLokal",
+    year: 2023,
+    thumbnail: "/images/project/KulturLokal.png",
+    hero: "/images/project/KulturLokal.png",
+    link: "#",
     description:
-      "Kulturlokal is a digital media platform dedicated to Indonesian culture and heritage, delivering insightful articles, stories, and updates that celebrate and preserve the rich traditions and cultural diversity of Indonesia.",
+      "Kulturlokal is a digital media platform dedicated to Indonesian culture...",
+    brief: {
+      text: "A digital media platform dedicated to promoting Indonesian cultural heritage through curated content, stories, and educational features.",
+    },
+    result: {
+      text: "Provided a platform for cultural preservation and digital exposure.",
+    },
+    tech_stack: {
+      text: "Tech stacks for digital publishing",
+      stacks: [],
+    },
   },
   {
     id: "semangatbaik",
-    title: "Semangatbaik",
-    image: "/images/project/SemangatBaik.png",
+    name: "Semangatbaik",
+    year: 2023,
+    thumbnail: "/images/project/SemangatBaik.png",
+    hero: "/images/project/SemangatBaik.png",
+    link: "#",
     description:
-      "Semangatbaik is a local news portal that delivers timely and relevant news, stories, and updates focused on community events and issues, keeping readers informed and engaged with their surroundings.",
+      "Semangatbaik is a local news portal that delivers timely and relevant news...",
+    brief: {
+      text: "Local news and community portal focused on timely, positive, and relevant content tailored for grassroots readers.",
+    },
+    result: {
+      text: "Increased community engagement with hyperlocal reporting.",
+    },
+    tech_stack: {
+      text: "Tech stacks for news publishing",
+      stacks: [],
+    },
   },
 ];
 

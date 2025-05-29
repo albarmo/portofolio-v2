@@ -20,6 +20,9 @@ const spaceMono = Space_Mono({
 export const metadata: Metadata = {
     title: "ALBARMS | Homepage",
     description: "Albar Moerhamsa Portfolio V2",
+    icons: {
+        icon: '/favicon.ico', // path relative to the public folder
+    },
 };
 
 export const viewport: Viewport = {
@@ -39,9 +42,6 @@ export default function RootLayout({
             <body
                 className={`${saira.variable} ${spaceMono.variable} overflow-x-hidden`}
             >
-                <Head>
-                    <link rel="icon" href="/favicon.png" sizes="any" />
-                </Head>
                 <Navbar />
                 <GSAPSmootherProvider>
                     {children}

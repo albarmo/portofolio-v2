@@ -14,7 +14,7 @@ const ProjectGridCanvas = () => {
                     <Image
                         className="block"
                         key={index}
-                        src={project.image}
+                        src={project.thumbnail}
                         alt={"Project Name"}
                         width={400}
                         height={400}

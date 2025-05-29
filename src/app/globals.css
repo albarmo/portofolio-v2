@@ -718,8 +718,8 @@ section {
 @keyframes dashA {
   from {
     stroke-width: 2.5;
-    stroke: #cdf96d92;
-    opacity: 25%;
+    stroke: #ccf96d;
+    opacity: 55%;
     stroke-dashoffset: 822;
   }
   to {
@@ -738,8 +738,8 @@ section {
 @keyframes dashM {
   from {
     stroke-width: 2.5;
-    stroke: #cdf96d92;
-    opacity: 25%;
+    stroke: #ccf96d;
+    opacity: 55%;
     stroke-dashoffset: 822;
   }
   to {
