@@ -60,9 +60,11 @@ export default function WorksPage() {
                         what are you waiting for ?
                     </p>
                     <button className="card-wrapper w-full h-14 md:h-11 md:w-40 rounded-lg cursor-pointer">
-                        <p className="card-content rounded-lg bg-gradient-to-r from-black/90 to-slate-900/80">
-                            Get In Touch
-                        </p>
+                        <Link href='https://wa.me/6281280709980?text=Halo%2C%20Albar%20tertarik%20dengan%20portofolio%20anda' target="_blank">
+                            <p className="card-content rounded-lg bg-gradient-to-r from-black/90 to-slate-900/80">
+                                Get In Touch
+                            </p>
+                        </Link>
                     </button>
                 </section>
                 <section className="cta-gradient-r absolute right-0 top-0 h-full w-full animate-pulse"></section>
